@@ -1,0 +1,696 @@
+.add_lot_wrapper{
+  display: none;
+  padding: 10px 50px 20px 50px;
+
+  @media all and (max-width:460px){
+    padding: 10px 25px 20px 25px;
+  }
+
+  @media all and (max-width:350px){
+    padding: 10px 10px 20px 10px;
+  }
+
+  .user_info{
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+
+    span{
+      font-weight: bold;
+    }
+  }
+
+  .add_lot_lotList{
+    margin-bottom: 20px;
+
+    h3{
+      padding: 10px;
+      //background: #264D9A;
+      //color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .add_lot_lotList_items{
+      //border: 2px solid #264D9A;
+      padding: 20px;
+      border-top: none;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+
+      @media all and (max-width:540px){
+        padding: 10px;
+      }
+
+      .add_lot_lotList_item{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        //border-bottom: 1px solid #264D9A;
+
+        @media all and (max-width:1170px){
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        @media all and (max-width:640px){
+          flex-direction: column;
+        }
+
+        &:first-of-type{
+          padding-top: 0;
+        }
+
+        &:last-of-type{
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+
+        .add_lot_lotList_item_details{
+
+          @media all and (max-width:1170px){
+            margin-bottom: 10px;
+          }
+
+          h3{
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+
+            @media all and (max-width:540px){
+              border-top-left-radius: 0;
+              border-top-right-radius: 0;
+              //-webkit-box-shadow: 0 4px 4px -2px #264D9A;
+              //-moz-box-shadow: 0 4px 4px -2x #264D9A;
+              //box-shadow: 0 4px 4px -2px #264D9A;
+              margin-bottom: 10px;
+            }
+
+          }
+
+          .add_lot_lotList_item_details_inner_wrapper{
+            display: flex;
+
+            @media all and (max-width:800px){
+              flex-direction: column;
+              //border: 2px solid #264D9A;
+              border-bottom-left-radius: 15px;
+              border-bottom-right-radius: 15px;
+            }
+
+            @media all and (max-width:540px){
+              border-bottom-left-radius: 0;
+              border-bottom-right-radius: 0;
+              border: none;
+
+
+            }
+
+
+            .add_lot_lotList_item_details_img{
+              font-size: 0;
+
+              @media all and (max-width:800px){
+                align-self: center;
+              }
+
+              @media all and (max-width:540px){
+                margin-bottom: 10px;
+              }
+            }
+
+            .add_lot_lotList_item_details_show_car_info,
+            .add_lot_lotList_item_details_hide_car_info{
+              display: none;
+
+              @media all and (max-width:540px){
+                display: block;
+
+                &:hover{
+                  cursor: pointer;
+                }
+              }
+              padding: 5px 0;
+              text-align: center;
+              background: url("../images/show_car_info_down_arr.png") calc(100% - 20px) center no-repeat, #264D9A;
+              border-radius: 5px;
+
+              p{
+                font-weight: bold;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+              }
+            }
+
+            .add_lot_lotList_item_details_hide_car_info{
+              background: url("../images/hide_car_info_up_arr.png") calc(100% - 20px) center no-repeat, #264D9A;
+              display: none;
+              margin-top: 10px;
+            }
+
+            .add_lot_lotList_item_details_show_car_info{
+              margin-bottom: 10px;
+            }
+
+
+            .add_lot_lotList_item_details_info{
+
+              //border-bottom: 2px solid #264D9A;
+              //border-right: 2px solid #264D9A;
+              //border-bottom-right-radius: 15px;
+              padding: 10px 20px;
+
+              @media all and (max-width:800px){
+                padding: 10px;
+                background: #264D9A;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+              }
+
+              @media all and (max-width:540px){
+                display: none;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                padding: 0 10px;
+              }
+
+              .add_lot_lotList_item_detailed_info{
+                display: flex;
+
+                @media all and (max-width:640px){
+                  justify-content: space-around;
+                }
+
+                @media all and (max-width:540px){
+                  flex-direction: column;
+
+                }
+
+
+                .add_lot_lotList_item_detailed_info_column_1,
+                .add_lot_lotList_item_detailed_info_column_2{
+                  margin-right: 20px;
+
+                  @media all and (max-width:540px){
+                    margin-right: 0;
+                  }
+                }
+
+                .add_lot_lotList_item_detailed_info_column_1,
+                .add_lot_lotList_item_detailed_info_column_2,
+                .add_lot_lotList_item_detailed_info_column_3{
+
+                  &>div{
+                    display: flex;
+                    margin-bottom: 20px;
+
+
+                    &:last-of-type{
+                      margin-bottom: 0;
+                    }
+
+                    @media all and (max-width:540px){
+                      justify-content: center;
+                      margin-bottom: 0;
+                      padding-bottom: 10px;
+                      padding-top: 10px;
+                      border-bottom: 1px solid #fff;
+
+
+                      &:last-of-type{
+                        padding-bottom: 10px;
+                      }
+
+                    }
+
+                    &>p:first-of-type{
+                      font-size: 0;
+                      min-width: 24px;
+                      min-height: 24px;
+                    }
+
+                    &>p:last-of-type{
+                      align-self: center;
+                      margin-left: 5px;
+                      //color: #264D9A;
+                    }
+                  }
+                }
+                .add_lot_lotList_item_detailed_info_column_3{
+                  &>div{
+                    &:last-of-type{
+                      border-bottom: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .add_lot_lotList_item_bid_and_sale_date_info{
+          align-self: center;
+
+          @media all and (max-width:1170px){
+            width: 50%;
+          }
+          @media all and (max-width:640px){
+            width: auto;
+            align-self: center;
+            margin-bottom: 10px;
+          }
+
+
+          &>div{
+            display: flex;
+            margin-bottom: 10px;
+
+            &:last-of-type{
+              margin-bottom: 0;
+            }
+
+            p{
+              //color: #264D9A;
+
+              &:first-of-type{
+                min-width: 100px;
+                align-self: center;
+              }
+
+              &:last-of-type{
+                font-weight: bold;
+
+              }
+
+            }
+
+
+          }
+
+
+
+        }
+
+        .add_lot_lotList_item_edit_delete{
+          align-self: center;
+          
+          p{
+            text-align: center;
+
+            &:first-of-type{
+              margin-bottom: 10px;
+            }
+
+            a{
+              display: block;
+              padding: 10px 20px;
+              //background: #264D9A;
+              //color: #fff;
+              font-size: 18px;
+              font-weight: bold;
+              text-decoration: none;
+              text-transform: capitalize;
+              letter-spacing: 1px;
+              border-radius: 10px;
+              border: 2px solid rgba(0,0,0,0);
+              transition: border 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s;
+
+              &:hover{
+                //border: 2px solid #264D9A;
+                //background: #fff;
+                //color: #264D9A;
+                //-webkit-box-shadow: 0 0 2px 0.5px #264D9A;
+                //-moz-box-shadow: 0 0 2px 0.5px #264D9A;
+                //box-shadow: 0 0 2px 0.5px #264D9A;
+                transition: border 0.5s, background-color 0.5s, color 0.5s, box-shadow 0.5s;
+              }
+            }
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  .add_lot_new_lot{
+
+    p{
+      margin-bottom: 20px;
+
+      a{
+        display: inline-block;
+        padding: 10px 30px;
+        //background: #264D9A;
+        //color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        text-decoration: none;
+        border: 2px solid rgba(0,0,0,0);
+        transition: border 0.5s, background-color 0.5s, color 0.5s;
+
+        &:hover{
+          //border: 2px solid #264D9A;
+          //background: #fff;
+          //color: #264D9A;
+          transition: border 0.5s, background-color 0.5s, color 0.5s;
+        }
+      }
+    }
+
+    .new_lot{
+      position: relative;
+
+      .new_lot_demo{
+        position: absolute;
+        top: 56px;
+        right: 10px;
+
+        @media all and (max-width: 1200px){
+          max-width: 50%;
+        }
+
+        @media all and (max-width: 950px){
+          max-width: 40%;
+        }
+
+        @media all and (max-width: 850px){
+          display: none;
+        }
+
+
+
+
+        h3{
+          border-top-left-radius: 20px;
+          border-top-right-radius: 0;
+
+          @media all and (max-width: 1200px){
+            border-bottom-right-radius: 20px;
+
+            margin-bottom: 10px;
+          }
+        }
+
+
+        .new_lot_demo_inner_wrapper{
+          display: flex;
+
+          @media all and (max-width: 1200px){
+            flex-wrap: wrap;
+          }
+
+          .new_lot_demo_img{
+            font-size: 0;
+
+            @media all and (max-width: 1200px){
+              margin-bottom: 10px;
+            }
+
+          }
+
+          .new_lot_demo_info{
+            border-bottom: 2px solid #264D9A;
+            border-right: 2px solid #264D9A;
+            border-bottom-right-radius: 20px;
+
+            @media all and (max-width: 1200px){
+              border: 2px solid #264D9A;
+              width: 100%;
+              border-top-left-radius: 20px;
+            }
+
+
+
+            .new_lot_demo_detailed_info{
+              padding: 10px 20px;
+              display: flex;
+              width: 100%;
+              height: 100%;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              align-items: center;
+
+              @media all and (max-width: 1200px){
+                justify-content: space-around;
+              }
+
+              @media all and (max-width: 1000px){
+                flex-direction: column;
+                align-items: flex-start;
+              }
+
+              .new_lot_demo_detailed_info_column_1,
+              .new_lot_demo_detailed_info_column_2{
+                margin-right: 20px;
+
+                @media all and (max-width: 1000px){
+                  margin-right: 0;
+                }
+              }
+
+              .new_lot_demo_detailed_info_column_1,
+              .new_lot_demo_detailed_info_column_2,
+              .new_lot_demo_detailed_info_column_3{
+
+                div{
+                  display: flex;
+
+                  @media all and (max-width: 1000px){
+                    justify-content: flex-start;
+                  }
+
+                  &:last-of-type{
+                    p{
+                      margin-bottom: 0;
+                    }
+                  }
+
+                  &>p{
+                    color: #264D9A;
+
+                    @media all and (max-width: 1000px){
+                      margin-bottom: 5px;
+                    }
+
+                    &:first-of-type{
+                      font-size: 0;
+                      min-width: 24px;
+                      min-height: 24px;
+                    }
+                    &:last-of-type{
+                      align-self: center;
+                      margin-left: 5px;
+                    }
+
+                  }
+                }
+              }
+            }
+          }
+
+
+        }
+
+        .new_lot_bid_and_sale_date_info{
+          margin-top: 20px;
+
+          p{
+            padding: 10px;
+            color: #fff;
+            font-weight: bold;
+            background: #264D9A;
+            border-radius: 10px;
+
+            span{
+              background: #fff;
+              margin-left: 10px;
+              padding: 5px 10px;
+              border-radius: 5px;
+              color: #264D9A;
+              font-weight: bold;
+            }
+          }
+        }
+
+
+
+      }
+
+
+      h3{
+        background: #264D9A;
+        padding: 10px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      #new_lot_form{
+        border: 2px solid #264D9A;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 10px;
+
+        @media all and (max-width: 410px){
+          padding: 10px 5px;
+        }
+
+        &>div{
+          display: flex;
+
+
+
+          @media all and (max-width: 410px){
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+          }
+
+          &>p{
+            margin-bottom: 15px;
+            color: #264D9A;
+
+            @media all and (max-width: 410px){
+              margin-bottom: 5px;
+            }
+
+            &:first-of-type{
+              min-width: 200px;
+              text-align: center;
+              align-self: center;
+
+              @media all and (max-width: 520px){
+                min-width: 150px;
+              }
+
+
+
+            }
+
+            input{
+              color: #264D9A;
+
+            }
+
+          }
+
+
+        }
+
+        .new_lot_form_submit_btn{
+          justify-content: center;
+        }
+
+        .new_lot_form_photos{
+          border: 1px solid #264D9A;
+          border-radius: 20px;
+          margin-bottom: 10px;
+          padding-top: 10px;
+          color: #264D9A;
+
+          @media all and (max-width: 670px){
+            p:first-of-type{
+              min-width: 140px;
+            }
+          }
+
+          @media all and (max-width: 610px){
+            p:first-of-type{
+              min-width: 100px;
+            }
+          }
+
+          @media all and (max-width: 570px){
+            p:first-of-type{
+              min-width: 60px;
+            }
+
+          }
+
+          @media all and (max-width: 530px){
+            flex-direction: column;
+
+            #new_lot_form_car_photos{
+              align-self: center;
+
+              @media all and (max-width: 490px){
+                & p{
+                  text-align: center;
+
+                  &.new_lot_form_car_photos_main_photo,
+                  &.new_lot_form_car_photos_featured_photos{
+                    text-align: left;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                  }
+
+                  input[type="file"]{
+                    max-width: 125px;
+                  }
+                }
+              }
+            }
+
+          }
+
+
+
+
+
+
+        }
+
+
+        input, select{
+          border: 2px solid #264D9A;
+          padding: 5px;
+          border-radius: 10px;
+
+          &:focus{
+            -webkit-box-shadow: 0 0 2px 0.5px #264D9A;
+            -moz-box-shadow: 0 0 2px 0.5px #264D9A;
+            box-shadow: 0 0 2px 0.5px #264D9A;
+          }
+
+          &[type="file"]{
+            border: none;
+          }
+
+          &[type="submit"]{
+            padding: 10px 20px;
+            background: #264D9A;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            border: 2px solid rgba(0,0,0,0);
+            transition: border 0.2s, background-color 0.2s, color 0.2s;
+
+            &:hover{
+              cursor: pointer;
+              border: 2px solid #264D9A;
+              background: #fff;
+              color: #264D9A;
+              transition: border 0.2s, background-color 0.2s, color 0.2s;
+            }
+
+
+          }
+
+        }
+      }
+
+    }
+  }
+}
