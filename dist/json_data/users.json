@@ -1,0 +1,37 @@
+[
+  {
+    "firstName" : "Michael",
+    "lastName" : "Jackson",
+    "eMail" : "mjack@mail.com",
+    "phone" : "111 - 222 - 333",
+    "password" : "12345"
+  },
+  {
+    "firstName" : "Mike",
+    "lastName" : "Tyson",
+    "eMail" : "tyson@mail.com",
+    "phone" : "333 - 222 - 333",
+    "password" : "qwerty12345"
+  },
+  {
+    "firstName" : "Britney",
+    "lastName" : "Spears",
+    "eMail" : "britney@mail.com",
+    "phone" : "111 - 777 - 333",
+    "password" : "12345bvcxz"
+  },
+  {
+    "firstName" : "Jason",
+    "lastName" : "Statham",
+    "eMail" : "js@mail.com",
+    "phone" : "777 - 222 - 333",
+    "password" : "asdf12345"
+  },
+  {
+    "firstName" : "Arnold",
+    "lastName" : "Swarznegger",
+    "eMail" : "arny@mail.com",
+    "phone" : "12345-321",
+    "password" : "12345iron"
+  }
+]
