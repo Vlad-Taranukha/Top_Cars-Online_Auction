@@ -1,0 +1,13 @@
+{
+	"bmw" : "320i, 330i, 340i, 320d, 330d, 335d",
+	"audi" : "a1, a2, a3, a4, a5, a6",
+	"mercedes" : "c180, c200, c220, c250, c300, c43amg, c63amg, e250, e300, e63amg, s500, s600, s63amg",
+	"nissan" : "juke, qashqai, x-trail, teana, leaf, gt-r",
+	"toyota" : "supra, corolla, rav4, land cruiser 200, prado, camry",
+	"mitsubishi" : "outlander, pajero, pajero sport, asx, lancer",
+	"volkswagen" : "amarok, passat, golf, touareg, jetta, tiguan",
+	"porsche" : "panamera, cayeene, 911 turbo S, macan",
+	"hyundai" : "santa fe, tucson, elantra, grandeur, accent, creta",
+	"kia" : "sportage, sorento, niro, soul, optima, stinger"
+}
+	

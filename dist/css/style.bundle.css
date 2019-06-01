@@ -124,6 +124,8 @@ header {
         cursor: pointer;
         background: none;
         color: #fff; }
+    header .header_upper_block .sign_up_register_buttons_and_forms #account_btn, header .header_upper_block .sign_up_register_buttons_and_forms #log_out_btn {
+      display: none; }
     header .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form form label {
       text-align: center; }
     header .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form form p {
@@ -194,6 +196,22 @@ header {
           font-weight: bold;
           border-top-left-radius: 12px;
           border-top-right-radius: 12px; }
+        header .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .register_form .registered_msg, header .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .sign_up_form .registered_msg, header .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .register_form .registered_msg, header .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .sign_up_form .registered_msg {
+          padding: 5px 0;
+          margin: 20px 20px 0;
+          border: 2px solid #0f0;
+          text-align: center;
+          border-radius: 5px;
+          color: #264D9A;
+          display: none; }
+        header .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .register_form .invalid_msg, header .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .sign_up_form .invalid_msg, header .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .register_form .invalid_msg, header .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .sign_up_form .invalid_msg {
+          padding: 5px 0;
+          margin: 20px 20px 0;
+          border: 2px solid #f00;
+          text-align: center;
+          border-radius: 5px;
+          color: #264D9A;
+          display: none; }
         header .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .register_form form, header .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .sign_up_form form, header .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .register_form form, header .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .sign_up_form form {
           padding: 20px; }
           @media all and (max-width: 350px) {
@@ -1811,6 +1829,14 @@ main {
   @media all and (max-width: 350px) {
     .add_lot_wrapper {
       padding: 10px 10px 20px 10px; } }
+  .add_lot_wrapper .user_info {
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 10px; }
+    .add_lot_wrapper .user_info span {
+      font-weight: bold; }
   .add_lot_wrapper .add_lot_lotList {
     margin-bottom: 20px; }
     .add_lot_wrapper .add_lot_lotList h3 {
@@ -1848,6 +1874,7 @@ main {
           .add_lot_wrapper .add_lot_lotList .add_lot_lotList_items .add_lot_lotList_item .add_lot_lotList_item_details {
             margin-bottom: 10px; } }
         .add_lot_wrapper .add_lot_lotList .add_lot_lotList_items .add_lot_lotList_item .add_lot_lotList_item_details h3 {
+          text-transform: uppercase;
           -webkit-box-shadow: none;
           -moz-box-shadow: none;
           box-shadow: none; }
@@ -1963,7 +1990,8 @@ main {
                 .add_lot_wrapper .add_lot_lotList .add_lot_lotList_items .add_lot_lotList_item .add_lot_lotList_item_details .add_lot_lotList_item_details_inner_wrapper .add_lot_lotList_item_details_info .add_lot_lotList_item_detailed_info .add_lot_lotList_item_detailed_info_column_2 > div > p:last-of-type,
                 .add_lot_wrapper .add_lot_lotList .add_lot_lotList_items .add_lot_lotList_item .add_lot_lotList_item_details .add_lot_lotList_item_details_inner_wrapper .add_lot_lotList_item_details_info .add_lot_lotList_item_detailed_info .add_lot_lotList_item_detailed_info_column_3 > div > p:last-of-type {
                   align-self: center;
-                  margin-left: 5px; }
+                  margin-left: 5px;
+                  text-transform: capitalize; }
               .add_lot_wrapper .add_lot_lotList .add_lot_lotList_items .add_lot_lotList_item .add_lot_lotList_item_details .add_lot_lotList_item_details_inner_wrapper .add_lot_lotList_item_details_info .add_lot_lotList_item_detailed_info .add_lot_lotList_item_detailed_info_column_3 > div:last-of-type {
                 border-bottom: none; }
         .add_lot_wrapper .add_lot_lotList .add_lot_lotList_items .add_lot_lotList_item .add_lot_lotList_item_bid_and_sale_date_info {
@@ -2491,6 +2519,8 @@ main {
         background: url(../images/close_night.png); }
       .header_night .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .register_form h2, .header_night .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .sign_up_form h2, .header_night .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .register_form h2, .header_night .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .sign_up_form h2 {
         background: #1d1d1f; }
+      .header_night .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .register_form .registered_msg, .header_night .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .register_form .invalid_msg, .header_night .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .sign_up_form .registered_msg, .header_night .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .sign_up_form .invalid_msg, .header_night .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .register_form .registered_msg, .header_night .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .register_form .invalid_msg, .header_night .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .sign_up_form .registered_msg, .header_night .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .sign_up_form .invalid_msg {
+        color: #fff; }
       .header_night .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .register_form form label, .header_night .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .sign_up_form form label, .header_night .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .register_form form label, .header_night .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .sign_up_form form label {
         color: #fff; }
       .header_night .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .register_form form input, .header_night .header_upper_block .sign_up_register_buttons_and_forms .register_form_wrapper .sign_up_form form input, .header_night .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .register_form form input, .header_night .header_upper_block .sign_up_register_buttons_and_forms .sign_up_form_wrapper .sign_up_form form input {
@@ -3224,6 +3254,10 @@ main {
         background: #1d1d1f;
         color: #fff; }
 
+.add_lot_wrapper_day .user_info {
+  background: #264D9A;
+  box-shadow: none; }
+
 .add_lot_wrapper_day .add_lot_lotList h3 {
   background: #264D9A;
   color: #fff; }
@@ -3371,6 +3405,12 @@ main {
     background: url(../images/engine.png) center center no-repeat; }
   .add_lot_wrapper_day .add_lot_new_lot .new_lot .new_lot_demo .new_lot_demo_inner_wrapper .new_lot_demo_info .new_lot_demo_detailed_info .new_lot_demo_detailed_info_column_3 > div > p.engine_power {
     background: url(../images/engine_power.png) center center no-repeat; }
+
+.add_lot_wrapper_night .user_info {
+  background: #1d1d1f;
+  -webkit-box-shadow: 0 0 10px 5px #fff;
+  -moz-box-shadow: 0 0 10px 5px #fff;
+  box-shadow: 0 0 10px 5px #fff; }
 
 .add_lot_wrapper_night .add_lot_lotList h3 {
   background: #1d1d1f;

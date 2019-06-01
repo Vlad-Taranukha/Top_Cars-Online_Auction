@@ -25,15 +25,19 @@
                 <input id="sign_up_btn" type="button" value="Sign Up">
                 <input id="register_btn" type="button" value="Register">
 
+                <input id="account_btn" type="button" value="My Account">
+                <input id="log_out_btn" type="button" value="Log Out">
+
                 <div class="sign_up_form_wrapper">
                     <div class="sign_up_form">
                         <div class="close_sign_up_form_img"></div>
                         <h2>Sign Up</h2>
+                        <p class="invalid_msg">Invalid E-mail or password</p>
                         <form action="" method="POST" id="sign_up_form">
                             <label for="sign_up_email">E-mail</label>
-                            <p><input id="sign_up_email" type="email"></p>
+                            <p><input id="sign_up_email" type="email" required></p>
                             <label for="sign_up_pswd">Password</label>
-                            <p><input id="sign_up_pswd" type="password"></p>
+                            <p><input id="sign_up_pswd" type="password" required></p>
                             <div class="forgot_pswd"><a  href="#">Forgot password?</a></div>
                             <input type="submit" value="Sign Up">
                         </form>
@@ -44,6 +48,7 @@
                     <div class="register_form">
                         <div class="close_img"></div>
                         <h2>Registration</h2>
+                        <p class='registered_msg'>You have successfully registered!</p>
                         <form action="" method="POST" id="register_form">
                             <div class="user_full_name">
                                 <div class="user_name">
@@ -129,7 +134,7 @@
                 </div>
                 <nav class="main_menu">
                     <ul>
-                        <li><a href="#add">Home</a></li>
+                        <li><a href="#index">Home</a></li>
                         <li><a href="#">About Us</a>
                             <ul>
                                 <li><a href="#">1</a></li>
@@ -1070,10 +1075,11 @@
 
 <!--"Lot List and Add lot" page structure         -->
         <div class="add_lot_wrapper">
+            <div class="user_info"></div>
             <div class="add_lot_lotList">
                 <h3>Your lots</h3>
                 <div class="add_lot_lotList_items">
-                    <div class="add_lot_lotList_item">
+                    <!--<div class="add_lot_lotList_item">
                         <div class="add_lot_lotList_item_details">
                             <h3>BMW M5 <span>2017</span></h3>
                                 <div class="add_lot_lotList_item_details_inner_wrapper">
@@ -1172,8 +1178,8 @@
                             <p><a href="#">Delete lot</a></p>
 
                         </div>
-                    </div>
-                    <div class="add_lot_lotList_item">
+                    </div>-->
+                    <!--<div class="add_lot_lotList_item">
                         <div class="add_lot_lotList_item_details">
                             <h3>BMW M5 <span>2017</span></h3>
                             <div class="add_lot_lotList_item_details_inner_wrapper">
@@ -1272,7 +1278,7 @@
                             <p><a href="#">Delete lot</a></p>
 
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="add_lot_new_lot">

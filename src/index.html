@@ -1079,7 +1079,7 @@
             <div class="add_lot_lotList">
                 <h3>Your lots</h3>
                 <div class="add_lot_lotList_items">
-                    <div class="add_lot_lotList_item">
+                    <!--<div class="add_lot_lotList_item">
                         <div class="add_lot_lotList_item_details">
                             <h3>BMW M5 <span>2017</span></h3>
                                 <div class="add_lot_lotList_item_details_inner_wrapper">
@@ -1178,8 +1178,8 @@
                             <p><a href="#">Delete lot</a></p>
 
                         </div>
-                    </div>
-                    <div class="add_lot_lotList_item">
+                    </div>-->
+                    <!--<div class="add_lot_lotList_item">
                         <div class="add_lot_lotList_item_details">
                             <h3>BMW M5 <span>2017</span></h3>
                             <div class="add_lot_lotList_item_details_inner_wrapper">
@@ -1278,7 +1278,7 @@
                             <p><a href="#">Delete lot</a></p>
 
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="add_lot_new_lot">
@@ -1289,166 +1289,105 @@
 
                             <div class="new_lot_form_maker">
                                 <p><label for="new_lot_form_car_maker">Make</label></p>
-                                <p><input type="text" id="new_lot_form_car_maker"></p>
+                                <p><select id="new_lot_form_car_maker" required></select></p>
                             </div>
                             <div class="new_lot_form_model">
                                 <p><label for="new_lot_form_car_model">Model</label></p>
-                                <p><input type="text" id="new_lot_form_car_model"></p>
+                                <p><select disabled id="new_lot_form_car_model" required></select></p>
                             </div>
                             <div class="new_lot_form_year">
                                 <p><label for="new_lot_form_car_year">Year</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_year">
-                                        <option value="" selected></option>
-                                        <option value="">2010</option>
-                                        <option value="">2011</option>
-                                        <option value="">2012</option>
-                                        <option value="">2013</option>
-                                        <option value="">2014</option>
+                                    <select id="new_lot_form_car_year" required>
+                                        <option value="" selected ></option>
                                     </select>
                                 </p>
                             </div>
                             <div class="new_lot_form_mileage">
                                 <p><label for="new_lot_form_car_mileage">Mileage  (km.)</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_mileage">
-                                        <option value=""></option>
-                                        <option value="">less 5000</option>
-                                        <option value="">from 5001 to 10000</option>
-                                        <option value="">from 10001 to 15000</option>
-                                        <option value="">from 15001 to 20000</option>
-                                        <option value="">from 20001 to 25000</option>
-                                    </select>
+                                    <input id="new_lot_form_car_mileage" min="0" type="text" maxlength="7" required>
                                 </p>
                             </div>
                             <div class="new_lot_form_damage">
                                 <p><label for="new_lot_form_car_damage">Damage</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_damage">
+                                    <select id="new_lot_form_car_damage" required>
                                         <option value=""></option>
-                                        <option value="">Normal Wear</option>
-                                        <option value="">Front End</option>
-                                        <option value="">Back End</option>
-                                        <option value="">Side</option>
-                                        <option value="">Roof</option>
-                                        <option value="">All Over</option>
-                                        <option value="">Burn</option>
-                                        <option value="">Mechanical</option>
-                                        <option value="">Hail</option>
-                                        <option value="">Scratches</option>
-                                        <option value="">Rollover</option>
-                                        <option value="">Undercarriage</option>
-                                        <option value="">Vandalism</option>
-                                        <option value="">Water/Flood</option>
+
                                     </select>
                                 </p>
                             </div>
                             <div class="new_lot_form_location">
                                 <p><label for="new_lot_form_car_location">Location</label></p>
-                                <p><input type="text" id="new_lot_form_car_location"></p>
+                                <p><select id="new_lot_form_car_location" required>
+                                    <option value="" selected></option>
+                                </select></p>
                             </div>
                             <div class="new_lot_form_vehicle_type">
                                 <p><label for="new_lot_form_car_type">Car Type</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_type">
-                                        <option value=""></option>
-                                        <option value="">Sedan</option>
-                                        <option value="">SUV</option>
-                                        <option value="">2d Coupe</option>
-                                        <option value="">4d Coupe</option>
-                                        <option value="">Hatchback</option>
-                                        <option value="">Cabrio/Roadster</option>
-                                        <option value="">Pick-Up</option>
-                                        <option value="">Estate Car</option>
-                                        <option value="">Van/Minibus</option>
-                                    </select>
+                                    <select id="new_lot_form_car_type" required></select>
                                 </p>
                             </div>
                             <div class="new_lot_form_fuel_type">
                                 <p><label for="new_lot_form_car_fuel">Fuel Type</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_fuel">
-                                        <option value=""></option>
-                                        <option value="">Petrol</option>
-                                        <option value="">Diesel</option>
-                                        <option value="">Electric</option>
-                                        <option value="">LPG</option>
-                                        <option value="">Combined (petrol/LPG)</option>
-                                        <option value="">Hybrid (petrol/electric)</option>
-                                    </select>
+                                    <select id="new_lot_form_car_fuel" required></select>
                                 </p>
                             </div>
                             <div class="new_lot_form_transmission">
                                 <p><label for="new_lot_form_car_transmission">Transmission</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_transmission">
-                                        <option value=""></option>
-                                        <option value="">Automatic</option>
-                                        <option value="">Manual</option>
-                                    </select>
+                                    <select id="new_lot_form_car_transmission" required></select>
                                 </p>
                             </div>
                             <div class="new_lot_form_cylinder">
                                 <p><label for="new_lot_form_car_cylinder">Cylinder</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_cylinder">
-                                        <option value=""></option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                        <option value="">5</option>
-                                        <option value="">6</option>
-                                        <option value="">8</option>
-                                        <option value="">10</option>
-                                        <option value="">12</option>
-                                        <option value="">16</option>
-                                    </select>
+                                    <select id="new_lot_form_car_cylinder" required></select>
                                 </p>
                             </div>
                             <div class="new_lot_form_drive_train">
                                 <p><label for="new_lot_form_car_drive">Drive Train</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_drive">
-                                        <option value=""></option>
-                                        <option value="">FWD</option>
-                                        <option value="">RWD</option>
-                                        <option value="">AWD</option>
-                                        <option value="">4WD/FWD</option>
-                                        <option value="">4WD/RWD</option>
-                                    </select>
+                                    <select id="new_lot_form_car_drive" required></select>
                                 </p>
                             </div>
                             <div class="new_lot_form_engine">
                                 <p><label for="new_lot_form_car_engine">Engine Capacity</label></p>
-                                <p><input type="text" id="new_lot_form_car_engine"></p>
+                                <p>
+                                    <select id="new_lot_form_car_engine" required></select>
+                                </p>
                             </div>
                             <div class="new_lot_form_vin">
                                 <p><label for="new_lot_form_car_vin">VIN</label></p>
-                                <p><input type="text" id="new_lot_form_car_vin"></p>
+                                <p><input type="text" id="new_lot_form_car_vin" minlength="8" maxlength="8" required></p>
                             </div>
                             <div class="new_lot_form_color">
                                 <p><label for="new_lot_form_car_color">Color</label></p>
-                                <p><input type="text" id="new_lot_form_car_color"></p>
+                                <p><input type="text" id="new_lot_form_car_color" maxlength="15" required></p>
                             </div>
                             <div class="new_lot_form_power">
                                 <p><label for="new_lot_form_car_power">Power</label></p>
-                                <p><input type="text" id="new_lot_form_car_power"></p>
+                                <p><input type="text" id="new_lot_form_car_power" min="0" maxlength="4" required></p>
                             </div>
                             <div class="new_lot_form_min_bid">
                                 <p><label for="new_lot_form_car_min_bid">Minimal Bid ($)</label></p>
-                                <p><input type="text" id="new_lot_form_car_min_bid"></p>
+                                <p><input type="text" id="new_lot_form_car_min_bid" maxlength="10" min="0" required></p>
                             </div>
                             <div class="new_lot_form_sale_date">
                                 <p><label for="new_lot_form_car_sale_date">Sale Date</label></p>
-                                <p><input type="datetime-local" id="new_lot_form_car_sale_date"></p>
+                                <p><input type="datetime-local" id="new_lot_form_car_sale_date" required></p>
                             </div>
                             <div class="new_lot_form_fixed_price">
                                 <p><label for="new_lot_form_car_fixed_price">Fixed Price  ($)</label></p>
-                                <p><input type="text" id="new_lot_form_car_fixed_price"></p>
+                                <p><input type="text" id="new_lot_form_car_fixed_price" required></p>
                             </div>
                             <div class="new_lot_form_photos">
                                 <p><label for="new_lot_form_car_photos">Photos</label></p>
                                 <div id="new_lot_form_car_photos">
-                                    <p><input type="checkbox"> <input type="checkbox"> <input type="file" id="new_lot_form_car_photo1" accept="image/jpeg,image/png,image/gif"></p>
+                                    <p><input type="checkbox"> <input type="checkbox"> <input type="file" id="new_lot_form_car_photo1" accept="image/jpeg,image/png,image/gif" required></p>
                                     <p><input type="checkbox"> <input type="checkbox"> <input type="file" id="new_lot_form_car_photo2" accept="image/jpeg,image/png,image/gif"></p>
                                     <p><input type="checkbox"> <input type="checkbox"> <input type="file" id="new_lot_form_car_photo3" accept="image/jpeg,image/png,image/gif"></p>
                                     <p><input type="checkbox"> <input type="checkbox"> <input type="file" id="new_lot_form_car_photo4" accept="image/jpeg,image/png,image/gif"></p>
@@ -1469,7 +1408,11 @@
                         </div>
                     </form>
                     <div class="new_lot_demo">
-                        <h3>BMW M5 <span>2017</span></h3>
+                        <h3>
+                            <span id="new_lot_make">---</span>
+                            <span id="new_lot_model">---</span>
+                            <span id="new_lot_year">---</span>
+                        </h3>
                         <div class="new_lot_demo_inner_wrapper">
                             <div class="new_lot_demo_img">
                                 <img src="images/car_icon.jpg" alt="">
@@ -1479,57 +1422,57 @@
                                     <div class="new_lot_demo_detailed_info_column_1">
                                         <div>
                                             <p class="mileage"></p>
-                                            <p>100500km.</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="car_type"></p>
-                                            <p>Sedan</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="cylinders"></p>
-                                            <p>8</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="vin"></p>
-                                            <p>123456789</p>
+                                            <p>---</p>
                                         </div>
                                     </div>
 
                                     <div class="new_lot_demo_detailed_info_column_2">
                                         <div>
                                             <p class="damage"></p>
-                                            <p>Normal wear</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="fuel"></p>
-                                            <p>Petrol</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="drive"></p>
-                                            <p>4WD/RWD</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="color"></p>
-                                            <p>Blue</p>
+                                            <p>---</p>
                                         </div>
                                     </div>
 
                                     <div class="new_lot_demo_detailed_info_column_3">
                                         <div>
                                             <p class="location"></p>
-                                            <p>Vinnytsia</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="gearbox"></p>
-                                            <p>Automatic</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="engine"></p>
-                                            <p>4.4L</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="engine_power"></p>
-                                            <p>600 HP</p>
+                                            <p>---</p>
                                         </div>
 
                                     </div>
@@ -1539,10 +1482,9 @@
                         </div>
 
                         <div class="new_lot_bid_and_sale_date_info">
-                            <p>Minimal bid <span>3000$</span></p>
-                            <p>Sale date <span>31.01.2019 12:00</span></p>
-                            <p>Time left <span>5d. 12h. 35min.</span></p>
-                            <p>Fixed price <span>100.000$</span></p>
+                            <p>Minimal bid <span id="minimal_bid_span">---</span></p>
+                            <p>Sale date <span id="sale_date_span">---</span></p>
+                            <p>Fixed price <span id="fixed_price_span">---</span></p>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import dayNightSwitcher from "./scripts/dayNightSwitcher";
 import getHeaderSlider from "./scripts/headerSlider";
 import initIndexPage from "./scripts/initIndexPage";
 import getHeader from "./scripts/header/getHeader";
-import initAddPage from "./scripts/initAddPage";
+import initAddPage from "./scripts/addLot/initAddPage";
 import initAllPage from "./scripts/initAllPage";
 import initSinglePage from "./scripts/initSinglepage";
 
@@ -72,23 +72,6 @@ $(function(){
             $(scaledCarMainImg).fadeOut(500);
         }
     );
-
-
-
-    $('#new_lot_form select').css('width', $('#new_lot_form input[type="text"]:first').outerWidth()+'px');
-    $('#new_lot_form input[type="datetime-local"]').css({
-        'width':$('#new_lot_form input[type="text"]:first').outerWidth()+'px',
-        'box-sizing':'border-box'
-    });
-
-    $('#new_lot_form_car_sale_date').change(function () {
-        console.log($(this).val());
-    });
-
-    $('#new_lot_form_car_photo1').change(function () {
-        console.log(this.name);
-    });
-
 
 
         if($(window).width() < 1170){
@@ -246,7 +229,5 @@ let menu_item = $('header .header_logo_menu_search_block .menu_and_search_block 
             if ($(window).width() <= 600){
                 $('.car_item_info h3').find('span').wrap('<p></p>');
             }
-
-            console.log("privet");
 
 });
