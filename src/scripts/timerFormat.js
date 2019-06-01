@@ -52,6 +52,7 @@ function setTimerFormat(date) {
 
 
     return [days, hours, minutes, secondsWithoutMinutes];
+	console.log(1);
 }
 
 export default setTimerFormat;
