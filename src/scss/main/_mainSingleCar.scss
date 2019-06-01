@@ -1,0 +1,572 @@
+.single_car_wrapper{
+  display: none;
+  padding-bottom: 10px;
+
+  h2{
+    background: #264D9A;
+    padding: 10px 50px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+
+  .single_car_inner_wrapper{
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+
+    @media all and (max-width: 1000px){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media all and (max-width: 400px){
+      padding: 0 10px;
+      justify-content: center;
+    }
+
+    .single_car_gallery{
+      width: 300px;
+      height: 300px;
+
+      @media all and (max-width: 1000px){
+        order: 1;
+        margin-right: 20px;
+      }
+
+      @media all and (max-width: 800px){
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+
+      .single_car_gallery_main_img_and_main_thumbnails{
+        display: flex;
+        justify-content: space-between;
+
+        .single_car_gallery_main_img{
+          font-size: 0;
+          position: relative;
+
+          .scaled_car_main_img{
+            width: 480px;
+            height: 360px;
+            background: #264D9A;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            display: none;
+          }
+        }
+
+        .single_car_gallery_main_thumbnails{
+          font-size: 0;
+
+          img{
+            width: 60px;
+            height: 45px;
+            margin-bottom: 22.5px;
+            filter: grayscale(1);
+
+            &:last-of-type{
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .single_car_gallery_additional_thumbnails{
+        font-size: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        img{
+          margin-top: 15px;
+          margin-right: 20px;
+          filter: grayscale(1);
+
+          &:first-of-type{
+            filter: grayscale(0);
+          }
+
+          &:nth-of-type(4n){
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .single_car_lot_info_and_features_wrapper,
+    .single_car_bid_and_sale_info_wrapper{
+      &>div{
+        //border: 2px solid #264D9A;
+        border-radius: 15px;
+
+        h3{
+          text-align: center;
+          padding: 10px 150px;
+          //background: #264D9A;
+          font-size: 20px;
+          //color: #fff;
+          font-weight: bold;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+
+          @media all and (max-width: 1250px){
+            padding: 10px 120px;
+          }
+
+        }
+
+        &>div{
+          margin: 0 20px;
+          padding: 10px 0;
+          //border-bottom: 1px solid #264D9A;
+          display: flex;
+          justify-content: space-between;
+
+          &:last-of-type{
+            border-bottom: none;
+          }
+
+          p{
+            color: #264D9A;
+          }
+
+        }
+      }
+
+      .single_car_lot_info{
+        margin-bottom: 20px;
+
+        @media all and (max-width: 1000px){
+
+        }
+
+        h3{
+          @media all and (max-width: 1150px){
+            padding: 10px 80px;
+          }
+          @media all and (max-width: 1070px){
+            padding: 10px 50px;
+          }
+
+        }
+      }
+
+      .single_car_lot_features{
+        h3{
+          @media all and (max-width: 1150px){
+            padding: 10px 80px;
+          }
+          @media all and (max-width: 1070px){
+            padding: 10px 50px;
+          }
+
+
+        }
+      }
+    }
+
+    .single_car_lot_info_and_features_wrapper{
+      @media all and (max-width: 1000px){
+        order:3;
+        margin: 20px auto 0 auto;
+        width: 100%;
+
+
+      }
+
+    }
+
+    .single_car_bid_and_sale_info_wrapper{
+      @media all and (max-width: 1000px){
+        order:2;
+      }
+
+      @media all and (max-width: 800px){
+        width: 100%;
+      }
+
+      &>div{
+        &>h3{
+          @media all and (max-width: 1000px){
+            padding: 10px 150px;
+          }
+          @media all and (max-width: 480px){
+            padding: 10px 100px;
+          }
+
+        }
+      }
+
+      .single_car_bid_info{
+        margin-bottom: 20px;
+        .single_car_current_bid{
+          p:last-of-type{
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+
+      .single_car_your_bid{
+        padding-bottom: 0;
+        align-items: center;
+        border-bottom: none;
+
+        @media all and (max-width: 405px){
+          flex-direction: column;
+        }
+        
+        p:last-of-type{
+          text-align: right;
+
+          @media all and (max-width: 405px){
+            text-align: center;
+            width: 80%;
+            margin: 10px 0;
+          }
+        }
+
+        p>input{
+          margin-left: 5px;
+          padding: 5px;
+          border-radius: 10px;
+          //border: 2px solid #264D9A;
+
+          @media all and (max-width: 1000px){
+            width: 50%;
+          }
+
+          @media all and (max-width: 405px){
+            width: auto;
+          }
+        }
+      }
+
+        &>p{
+          margin: 5px 20px;
+          text-align: right;
+          color: #264D9A;
+
+          @media all and (max-width: 405px){
+            margin: 0 0 10px;
+            text-align: center;
+          }
+        }
+
+        .single_car_place_a_bid{
+          justify-content: flex-end;
+          padding-top: 0;
+
+          @media all and (max-width: 405px){
+            justify-content: center;
+          }
+
+          input[type="button"]{
+            padding: 10px 20px;
+            //background: #264D9A;
+            //color: #fff;
+            border-radius: 10px;
+            font-weight: bold;
+            display: inline-block;
+            border: 2px solid rgba(0,0,0,0);
+            font-size: 18px;
+            transition: border 0.5s, background-color 0.5s, color 0.5s;
+
+            &:hover{
+              //border: 2px solid #264D9A;
+              //background: #fff;
+              //color: #264D9A;
+              cursor: pointer;
+              //-webkit-box-shadow: 0 0 2px 0.5px #264D9A;
+              //-moz-box-shadow: 0 0 2px 0.5px #264D9A;
+              //box-shadow: 0 0 2px 0.5px #264D9A;
+              transition: border 0.5s, background-color 0.5s, color 0.5s;
+            }
+          }
+        }
+      }
+
+      .single_car_sale_info{
+        margin-bottom: 20px;
+
+        &>div{
+          @media all and (max-width: 360px){
+            flex-direction: column;
+          }
+        }
+
+
+        &>div p:first-of-type{
+          margin-right: 50px;
+          align-self: center;
+
+          @media all and (max-width: 360px){
+            margin-right: 0;
+            //background: #fff;
+            //color: #1d1d1f;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+        }
+        &>div p:last-of-type{
+          text-align: center;
+        }
+      }
+
+      .single_car_buy_now{
+
+        .single_car_buy_now_fixed_price{
+          padding-bottom: 5px;
+
+          p:last-of-type{
+            font-weight: bold;
+            font-size: 18px;
+          }
+        }
+
+        .single_car_buy_now_btn{
+          justify-content: center;
+
+
+          input[type="button"]{
+            padding: 10px 20px;
+            //background: #264D9A;
+            //color: #fff;
+            border-radius: 10px;
+            font-weight: bold;
+            display: inline-block;
+            border: 2px solid rgba(0,0,0,0);
+            font-size: 18px;
+            transition: border 0.5s, background-color 0.5s, color 0.5s;
+
+            &:hover{
+              //border: 2px solid #264D9A;
+              //background: #fff;
+              //color: #264D9A;
+              cursor: pointer;
+              //-webkit-box-shadow: 0 0 2px 0.5px #264D9A;
+              //-moz-box-shadow: 0 0 2px 0.5px #264D9A;
+              //box-shadow: 0 0 2px 0.5px #264D9A;
+              transition: border 0.5s, background-color 0.5s, color 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.view_similar_vehicles_wrapper{
+  display: none;
+  //background: #264D9A;
+  padding: 0 50px;
+  margin-top: 20px;
+
+  @media all and (max-width:460px){
+    padding: 0 0 20px;
+  }
+
+  
+  h2{
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .view_similar_vehicles_list_wrapper{
+    padding-bottom: 20px;
+
+    .view_similar_vehicles_list_left_arr, .view_similar_vehicles_list_right_arr{
+      display: none;
+
+    }
+
+    @media all and (max-width:600px){
+      position: relative;
+      background: linear-gradient(to top, rgba(0,0,0,1) 0, rgba(0,0,0,0) 30px);
+
+      .view_similar_vehicles_list_left_arr, .view_similar_vehicles_list_right_arr{
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 110px;
+        //min-width: 35px;
+      }
+
+      .view_similar_vehicles_list_left_arr{
+        /*background:
+                url("../images/hiw_left_night.png") 15px center no-repeat,
+                linear-gradient(to right, rgba(0,0,0,1) 0, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0.5) 75%, rgba(0,0,0,0) 100%);
+        */
+        top: 0;
+        left: 0;
+
+        @media all and (max-width:480px){
+          background-position: 5px center, left center;
+        }
+
+        &:hover{
+          //background:
+            //      url("../images/hiw_left_night.png") 15px center no-repeat,
+              //    linear-gradient(to right, rgba(0,0,0,1) 0, rgba(0,0,0,0.75) 75%, rgba(0,0,0,0.5) 100%);
+          @media all and (max-width:480px){
+            background-position: 5px center, left center;
+          }
+        }
+      }
+      .view_similar_vehicles_list_right_arr{
+        //background: url("../images/hiw_right_night.png") calc(100% - 15px) center no-repeat,
+        //linear-gradient(to left, rgba(0,0,0,1) 0, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0.5) 75%, rgba(0,0,0,0) 100%);
+        top: 0;
+        right: 0;
+
+        @media all and (max-width:480px){
+          background-position: calc(100% - 5px) center, left center;
+        }
+
+        &:hover{
+          //background:
+            //      url("../images/hiw_right_night.png") calc(100% - 15px) center no-repeat,
+              //    linear-gradient(to left, rgba(0,0,0,1) 0, rgba(0,0,0,0.75) 75%, rgba(0,0,0,0.5) 100%);
+          @media all and (max-width:480px){
+            background-position: calc(100% - 5px) center, left center;
+          }
+        }
+      }
+
+
+    }
+
+
+
+    .view_similar_vehicles_list{
+      display: flex;
+      justify-content: space-between;
+
+      @media all and (max-width:1100px){
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      @media all and (max-width:600px){
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 20px;
+      }
+
+
+      .view_similar_vehicle_item{
+        max-width: 240px;
+        -webkit-box-shadow: 0 0 8px 4px #fff;
+        -moz-box-shadow: 0 0 8px 4px #fff;
+        box-shadow: 0 0 8px 4px #fff;
+
+        @media all and (max-width:1100px){
+          margin: 0 100px 20px;
+        }
+
+        @media all and (max-width:980px){
+          margin: 0 50px 20px;
+        }
+        @media all and (max-width:780px){
+          margin: 0 0 20px 0;
+        }
+
+        @media all and (max-width:600px){
+
+          -webkit-box-shadow: 0 4px 4px -2px #fff;
+          -moz-box-shadow: 0 4px 4px -2px #fff;
+          box-shadow:0 4px 4px -2px #fff;
+          margin-right: 20px;
+        }
+
+
+
+
+        .view_similar_vehicle_item_img{
+          font-size: 0;
+        }
+
+        .view_similar_vehicle_item_info{
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          //background: #fff;
+
+          h3{
+            padding: 10px 0;
+            font-size: 16px;
+            text-align: center;
+            background: #264D9A;
+
+            a{
+              font-weight: bold;
+              //color: #fff;
+              text-transform: uppercase;
+              text-decoration: none;
+            }
+          }
+
+          &>div{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            //border-bottom: 1px dotted #264D9A;
+
+            &:last-of-type{
+              border-bottom: none;
+            }
+
+            p{
+              //color: #264D9A;
+            }
+          }
+
+          .view_similar_vehicle_item_btn{
+            display: block;
+
+            p{
+              text-align: center;
+
+              a{
+                display: inline-block;
+                padding: 10px 20px;
+                //background: #264D9A;
+                //color: #fff;
+                text-decoration: none;
+                text-transform: capitalize;
+                font-weight: bold;
+                border: 2px solid rgba(0,0,0,0);
+                border-radius: 10px;
+                transition: border 0.5s, background-color 0.5s, color 0.5s;
+
+                &:hover{
+                  //border: 2px solid #264D9A;
+                  //background: #fff;
+                  //color: #264D9A;
+                  transition: border 0.5s, background-color 0.5s, color 0.5s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+
+}

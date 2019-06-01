@@ -1,0 +1,266 @@
+.header_day{
+
+}
+
+
+
+.header_night{
+
+  background: url("../images/bg_night.png");
+
+  .header_upper_block{
+    -webkit-box-shadow: 0 0 8px 2px rgba(255,255,255,0.5);
+    -moz-box-shadow: 0 0 8px 2px rgba(255,255,255,0.5);
+    box-shadow: 0 0 8px 2px rgba(255,255,255,0.5);
+    background: #1d1d1f;
+
+
+    .day_night_switcher{
+      .switcher_wrapper{
+        .switcher{
+          .flag{
+            border: 2px solid #1d1d1f;
+          }
+        }
+
+      }
+
+    }
+
+    .sign_up_register_buttons_and_forms{
+
+      input[type="button"]{
+
+        color: #1d1d1f;
+
+      }
+
+      .sign_up_form{
+
+        form{
+
+          .forgot_pswd{
+
+            a{
+              color: #fff;
+            }
+          }
+        }
+      }
+
+
+
+      .register_form_wrapper, .sign_up_form_wrapper{
+
+        .register_form, .sign_up_form{
+          background: url("../images/bg_night.png");
+          -webkit-box-shadow: 0 0 15px 5px #fff;
+          -moz-box-shadow: 0 0 15px 5px #fff;
+          box-shadow: 0 0 15px 5px #fff;
+
+          .close_img, .close_sign_up_form_img{
+            background: url("../images/close_night.png");
+
+          }
+
+          h2{
+            background: #1d1d1f;
+          }
+
+          .registered_msg, .invalid_msg{
+            color: #fff;
+          }
+
+          form{
+
+            label{
+              color: #fff;
+            }
+
+            input{
+              border:2px solid #1d1d1f;
+              -webkit-box-shadow: 0 0 4px 1px #fff;
+              -moz-box-shadow: 0 0 4px 1px #fff;
+              box-shadow: 0 0 4px 1px #fff;
+
+              &:focus{
+                -webkit-box-shadow: 0 0 10px 5px #fff;
+                -moz-box-shadow: 0 0 10px 5px #fff;
+                box-shadow: 0 0 10px 5px #fff;
+              }
+            }
+
+            p{
+              color: #fff;
+            }
+
+
+            input[type="submit"]{
+              background: #fff;
+              color: #1d1d1f;
+
+              &:hover{
+                background: #1d1d1f;
+                color: #fff;
+                border: 2px solid #fff;
+              }
+            }
+
+          }
+        }
+
+      }
+
+
+
+    }
+  }
+
+  .header_logo_menu_search_block{
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+
+    .menu_and_search_block{
+
+
+      .search_block{
+
+        form input[type="text"]{
+          border: 2px solid rgba(0,0,0,0);
+        }
+        form input[type="submit"]{
+          border: 2px solid #fff;
+          background: #1d1d1f;
+          color: #fff;
+        }
+      }
+      .vehicles_on_sale{
+        background: #1d1d1f;
+        -webkit-box-shadow: 0 0 4px 1px #fff;
+        -moz-box-shadow: 0 0 4px 1px #fff;
+        box-shadow: 0 0 4px 1px #fff;
+        p{
+          span{
+            color: #1d1d1f;
+          }
+        }
+
+      }
+      .main_menu{
+
+        ul{
+          li{
+            border-right: 2px solid #fff;
+
+            a{
+              color: #fff;
+
+              &:hover{
+                -webkit-box-shadow: inset 0 10px 10px -5px rgba(255, 255, 255, 0.5);
+                -moz-box-shadow: inset 0 10px 10px -5px rgba(255, 255, 255, 0.5);
+                box-shadow: inset 0 10px 10px -5px rgba(255, 255, 255, 0.5);
+              }
+
+            }
+
+            ul{
+
+              background: url("../images/bg_night.png");
+              -webkit-box-shadow: 5px 5px 10px 2px rgba(255, 255, 255, 0.5);
+              -moz-box-shadow: 5px 5px 10px 2px rgba(255, 255, 255, 0.5);
+              box-shadow: 5px 5px 10px 2px rgba(255, 255, 255, 0.5);
+              li{
+                border-right: none;
+
+                a{
+                  color: #fff;
+                  &:hover{
+                    -webkit-box-shadow:
+                            inset 0px 10px 10px -5px rgba(255, 255, 255, 0.5),
+                            inset 0px -10px 10px -5px rgba(255, 255, 255, 0.5);
+                    -moz-box-shadow:
+                            inset 0px 10px 10px -5px rgba(255, 255, 255, 0.5),
+                            inset 0px -10px 10px -5px rgba(255, 255, 255, 0.5);
+                    box-shadow:
+                            inset 0px 10px 10px -5px rgba(255, 255, 255, 0.5),
+                            inset 0px -10px 10px -5px rgba(255, 255, 255, 0.5);
+
+                  }
+
+                }
+
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  .main_menu_toggler{
+    background: #1d1d1f;
+    -webkit-box-shadow: 0 0 4px 1px #fff;
+    -moz-box-shadow: 0 0 4px 1px #fff;
+    box-shadow: 0 0 4px 1px #fff;
+
+  }
+
+  .main_menu2{
+    background: #1d1d1f;
+
+    .main_menu{
+
+      ul{
+
+        li{
+
+          ul{
+            background: url("../images/bg_night.png");
+            -webkit-box-shadow: 5px 5px 10px 2px rgba(255,255,255,0.5);
+            -moz-box-shadow: 5px 5px 10px 2px rgba(255,255,255,0.5);
+            box-shadow: 5px 5px 10px 2px rgba(255,255,255,0.5);
+
+            li{
+              border-bottom: 1px solid #fff;
+
+              @media all and (max-width: 900px){
+                box-shadow: none;
+                border-left: 23px solid #fff;
+                border-right: 23px solid #fff;
+
+                &:last-of-type{
+                  border-right: 23px solid #fff;
+                  border-bottom: 23px solid #fff;
+                  -webkit-box-shadow: 0 4px 4px 1px #1d1d1f;
+                  -moz-box-shadow: 0 4px 4px 1px #1d1d1f;
+                  box-shadow: 0 4px 4px 1px #1d1d1f;
+                }
+              }
+
+              a{
+                color: #fff;
+                &:hover{
+                  -webkit-box-shadow:
+                          inset 0px 10px 10px -5px rgba(255,255,255,0.5),
+                          inset 0px -10px 10px -5px rgba(255,255,255,0.5);
+                  -moz-box-shadow:
+                          inset 0px 10px 10px -5px rgba(255,255,255,0.5),
+                          inset 0px -10px 10px -5px rgba(255,255,255,0.5);
+                  box-shadow:
+                          inset 0px 10px 10px -5px rgba(255,255,255,0.5),
+                          inset 0px -10px 10px -5px rgba(255,255,255,0.5);
+                }
+
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
