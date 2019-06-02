@@ -347,7 +347,7 @@ function createLot(){
         lot.timeLeft = (timeToEnd - Date.now())/1000;
 
 
-        console.log(lot);
+        //console.log(lot);
 
         $('.add_lot_lotList_items').append(
             "" +

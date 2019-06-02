@@ -58,4 +58,16 @@ export default class Lot {
         $('#add_lot_'+this.vin).html(resTimeStr);
     }
 
+    lotTimerforAllPage(){
+        if (this.timeLeft <= 0){
+            $('.car_item_timer_'+this.vin).html("Auction finished...");
+        }else{
+            this.timeLeft--;
+            let resTime = setTimerFormat(this.timeLeft);
+            let resTimeStr = resTime[0]+"d. "+resTime[1]+"h. "+resTime[2]+"m. "+resTime[3]+"s";
+            $('.car_item_timer_'+this.vin).html("Time left: "+resTimeStr);
+        }
+
+    }
+
 }

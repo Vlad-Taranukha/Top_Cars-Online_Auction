@@ -3,7 +3,7 @@ import getHeaderSlider from "./scripts/headerSlider";
 import initIndexPage from "./scripts/initIndexPage";
 import getHeader from "./scripts/header/getHeader";
 import initAddPage from "./scripts/addLot/initAddPage";
-import initAllPage from "./scripts/initAllPage";
+import initAllPage from "./scripts/allLots/initAllPage";
 import initSinglePage from "./scripts/initSinglepage";
 
 
