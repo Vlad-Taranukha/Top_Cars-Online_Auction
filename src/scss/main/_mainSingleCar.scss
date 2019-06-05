@@ -155,6 +155,12 @@
           }
 
         }
+        
+        div{
+          p:last-of-type{
+            text-transform: capitalize;
+          }
+        }
       }
 
       .single_car_lot_features{
@@ -167,6 +173,12 @@
           }
 
 
+        }
+
+        div{
+          p:last-of-type{
+            text-transform: capitalize;
+          }
         }
       }
     }
@@ -415,6 +427,9 @@
         @media all and (max-width:480px){
           background-position: 5px center, left center;
         }
+        @media all and (max-width:360px){
+          background-position: 0 center, left center;
+        }
 
         &:hover{
           //background:
@@ -422,6 +437,9 @@
               //    linear-gradient(to right, rgba(0,0,0,1) 0, rgba(0,0,0,0.75) 75%, rgba(0,0,0,0.5) 100%);
           @media all and (max-width:480px){
             background-position: 5px center, left center;
+          }
+          @media all and (max-width:360px){
+            background-position: 0 center, left center;
           }
         }
       }
@@ -434,6 +452,9 @@
         @media all and (max-width:480px){
           background-position: calc(100% - 5px) center, left center;
         }
+        @media all and (max-width:360px){
+          background-position: right center, left center;
+        }
 
         &:hover{
           //background:
@@ -441,6 +462,9 @@
               //    linear-gradient(to left, rgba(0,0,0,1) 0, rgba(0,0,0,0.75) 75%, rgba(0,0,0,0.5) 100%);
           @media all and (max-width:480px){
             background-position: calc(100% - 5px) center, left center;
+          }
+          @media all and (max-width:360px){
+            background-position: right center, left center;
           }
         }
       }

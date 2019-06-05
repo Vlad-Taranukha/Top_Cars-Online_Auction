@@ -247,10 +247,25 @@
                 url("../images/hiw_left_night_custom.png") 15px center no-repeat,
                 linear-gradient(to right, rgba(38,77,154,1) 0, rgba(38,77,154,0.75) 50%, rgba(38,77,154,0.5) 75%, rgba(38,77,154,0) 100%);
 
+        @media all and (max-width:480px){
+          background-position: 5px center, left center;
+        }
+        @media all and (max-width:360px){
+          background-position: 0 center, left center;
+        }
+
         &:hover{
           background:
                   url("../images/hiw_left_night_custom.png") 15px center no-repeat,
                   linear-gradient(to right, rgba(38,77,154,1) 0, rgba(38,77,154,0.75) 75%, rgba(38,77,154,0.5) 100%);
+
+          @media all and (max-width:480px){
+            background-position: 5px center, left center;
+          }
+          @media all and (max-width:360px){
+            background-position: 0 center, left center;
+          }
+
         }
       }
 
@@ -259,11 +274,23 @@
                 url("../images/hiw_right_night_custom.png") calc(100% - 15px) center no-repeat,
                 linear-gradient(to left, rgba(38,77,154,1) 0, rgba(38,77,154,0.75) 50%, rgba(38,77,154,0.5) 75%, rgba(38,77,154,0) 100%);
 
+        @media all and (max-width:480px){
+          background-position: calc(100% - 5px) center, left center;
+        }
+        @media all and (max-width:360px){
+          background-position: right center, left center;
+        }
         &:hover{
           background:
                   url("../images/hiw_right_night_custom.png") calc(100% - 15px) center no-repeat,
                   linear-gradient(to left, rgba(38,77,154,1) 0, rgba(38,77,154,0.75) 75%, rgba(38,77,154,0.5) 100%);
 
+          @media all and (max-width:480px){
+            background-position: calc(100% - 5px) center, left center;
+          }
+          @media all and (max-width:360px){
+            background-position: right center, left center;
+          }
         }
       }
 
@@ -332,10 +359,25 @@
                 url("../images/hiw_left_night.png") 15px center no-repeat,
                 linear-gradient(to right, rgba(29, 29, 31,1) 0, rgba(29, 29, 31,0.75) 50%, rgba(29, 29, 31,0.5) 75%, rgba(29, 29, 31,0) 100%);
 
+        @media all and (max-width:480px){
+          background-position: 5px center, left center;
+        }
+        @media all and (max-width:360px){
+          background-position: 0 center, left center;
+        }
+
         &:hover{
           background:
                   url("../images/hiw_left_night.png") 15px center no-repeat,
                   linear-gradient(to right, rgba(29, 29, 31,1) 0, rgba(29, 29, 31,0.75) 75%, rgba(29, 29, 31,0.5) 100%);
+
+          @media all and (max-width:480px){
+            background-position: 5px center, left center;
+          }
+          @media all and (max-width:360px){
+            background-position: 0 center, left center;
+          }
+
         }
       }
 
@@ -344,10 +386,24 @@
                 url("../images/hiw_right_night.png") calc(100% - 15px) center no-repeat,
                 linear-gradient(to left, rgba(29, 29, 31,1) 0, rgba(29, 29, 31,0.75) 50%, rgba(29, 29, 31,0.5) 75%, rgba(29, 29, 31,0) 100%);
 
+        @media all and (max-width:480px){
+          background-position: calc(100% - 5px) center, left center;
+        }
+        @media all and (max-width:360px){
+          background-position: right center, left center;
+        }
+
         &:hover{
           background:
                   url("../images/hiw_right_night.png") calc(100% - 15px) center no-repeat,
                   linear-gradient(to left, rgba(29, 29, 31,1) 0, rgba(29, 29, 31,0.75) 75%, rgba(29, 29, 31,0.5) 100%);
+
+          @media all and (max-width:480px){
+            background-position: calc(100% - 5px) center, left center;
+          }
+          @media all and (max-width:360px){
+            background-position: right center, left center;
+          }
 
         }
       }

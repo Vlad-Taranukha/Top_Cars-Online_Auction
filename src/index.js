@@ -1,10 +1,10 @@
 import dayNightSwitcher from "./scripts/dayNightSwitcher";
-import getHeaderSlider from "./scripts/headerSlider";
-import initIndexPage from "./scripts/initIndexPage";
+import getHeaderSlider from "./scripts/header/headerSlider";
+import initIndexPage from "./scripts/index/initIndexPage";
 import getHeader from "./scripts/header/getHeader";
 import initAddPage from "./scripts/addLot/initAddPage";
 import initAllPage from "./scripts/allLots/initAllPage";
-import initSinglePage from "./scripts/initSinglepage";
+import initSinglePage from "./scripts/single/initSinglepage";
 import initSearchPage from "./scripts/search/initSearchPage";
 import initContacts from "./scripts/contacts/initContacts";
 
@@ -22,7 +22,7 @@ $(function(){
         initIndexPage();
     }else if(location.hash == "#all"){
         initAllPage();
-    }else if(location.hash == "#single"){
+    }else if(/^#car\d{8}$/.test(location.hash)){
         initSinglePage();
     }else if (location.hash == "#add") {
         initAddPage();
@@ -38,7 +38,8 @@ $(function(){
             initIndexPage();
         }else if (location.hash == "#all"){
             initAllPage();
-        }else if (location.hash == "#single"){
+        }else if (/^#car\d{8}$/.test(location.hash)){
+            $(window).scrollTop($('main').offset().top);
             initSinglePage();
         }else if (location.hash == "#add"){
             initAddPage();
@@ -48,40 +49,6 @@ $(function(){
             initContacts();
         }
     });
-
-
-    let singleCarMainImg = $('.single_car_gallery_main_img>img');
-    $('.single_car_gallery_additional_thumbnails img, .single_car_gallery_main_thumbnails img').click(function(){
-
-        if ($(this).css('filter') == "grayscale(0)"){
-            return;
-        }
-
-        $('.single_car_gallery_additional_thumbnails img, .single_car_gallery_main_thumbnails img').css('filter', 'grayscale(1)');
-        $(this).css('filter', 'grayscale(0)');
-
-        let thumbNailSource = $(this).attr('src').split('/');
-        thumbNailSource[thumbNailSource.indexOf('thumbnails')] = 'main_images';
-
-        $(singleCarMainImg).fadeOut(0);
-        $(singleCarMainImg).attr('src', thumbNailSource.join('/'));
-        $(singleCarMainImg).fadeIn(500);
-
-    });
-
-    let scaledCarMainImg = $('.scaled_car_main_img');
-    $('.single_car_gallery_main_img>img').hover(
-        function(){
-            if ($(window).width() < 900) return;
-            $(scaledCarMainImg).html(this.outerHTML);
-            $('.scaled_car_main_img img').css('transform-origin', 'top left').css('transform', 'scale(2)');
-            $(scaledCarMainImg).fadeIn(500);
-
-        },
-        function(){
-            $(scaledCarMainImg).fadeOut(500);
-        }
-    );
 
 
         if($(window).width() < 1170){
@@ -102,7 +69,9 @@ $(function(){
         }
 
 
-let menu_item = $('header .header_logo_menu_search_block .menu_and_search_block .main_menu>ul li a, header .main_menu2 .main_menu>ul li a');
+        let menu_item = $('' +
+            'header .header_logo_menu_search_block .menu_and_search_block .main_menu>ul li a, ' +
+            'header .main_menu2 .main_menu>ul li a');
             $(menu_item).each(function () {
 
                 if ($(this).siblings('ul').length > 0){
@@ -136,81 +105,5 @@ let menu_item = $('header .header_logo_menu_search_block .menu_and_search_block 
                     $(this).find('img').fadeIn(400);
                 }
             });
-
-
-            let numberOfHowItWorksSections = $('.how_it_works_sections section').length-1;
-            let firstOfHowItWorksSections = $('.how_it_works_sections section:first');
-            let howItWorksBubbles = $('.how_it_works_down_bubbles');
-
-            for (let i = 0; i <= numberOfHowItWorksSections; i++){
-                $(howItWorksBubbles).append("<p></p>");
-            }
-
-            let bubbleActive = 0;
-            $(howItWorksBubbles).children().eq(bubbleActive).addClass('active_how_it_works_section');
-
-            $('.how_it_works_right_switcher').click(function () {
-
-                bubbleActive++;
-                if (parseInt($(firstOfHowItWorksSections).css('margin-left')) == ("-"+$(firstOfHowItWorksSections).width() * numberOfHowItWorksSections)){
-
-                    $(firstOfHowItWorksSections).animate({
-                        'margin-left' : 0
-                    }, 400);
-                    $(howItWorksBubbles).children('p').removeClass('active_how_it_works_section');
-                    $(howItWorksBubbles).children('p').eq(0).addClass('active_how_it_works_section');
-                    bubbleActive = 0;
-                    return;
-                }
-                $(firstOfHowItWorksSections).animate({
-                    'margin-left' : "+=-100%"
-                }, 400);
-                $(howItWorksBubbles).children('p').removeClass('active_how_it_works_section');
-                $(howItWorksBubbles).children('p').eq(bubbleActive).addClass('active_how_it_works_section');
-
-            });
-
-
-    $('.how_it_works_left_switcher').click(function () {
-
-        if (parseInt($(firstOfHowItWorksSections).css('margin-left')) == 0){
-            $(firstOfHowItWorksSections).animate({
-                'margin-left' : "-"+ numberOfHowItWorksSections*100 + "%"
-            }, 400);
-            bubbleActive = numberOfHowItWorksSections;
-            $(howItWorksBubbles).children('p').removeClass('active_how_it_works_section');
-            $(howItWorksBubbles).children('p').eq(bubbleActive).addClass('active_how_it_works_section');
-            return;
-        }
-        bubbleActive--;
-        $(howItWorksBubbles).children('p').removeClass('active_how_it_works_section');
-        $(howItWorksBubbles).children('p').eq(bubbleActive).addClass('active_how_it_works_section');
-        $(firstOfHowItWorksSections).animate({
-            'margin-left' : "+=100%"
-        }, 400);
-    });
-
-
-    $(howItWorksBubbles).children('p:first').addClass('active_how_it_works_section');
-    $(howItWorksBubbles).children('p').click(function () {
-        bubbleActive = $(this).index();
-            $(howItWorksBubbles).children('p').removeClass('active_how_it_works_section');
-            $(this).addClass('active_how_it_works_section');
-        $(firstOfHowItWorksSections).animate({
-            'margin-left' : "-"+bubbleActive*100+"%"
-        }, 400);
-    });
-
-    $(howItWorksBubbles).css('left', 0.5*$(firstOfHowItWorksSections).width() - 0.5*$(howItWorksBubbles).width() + 50);
-    $(window).resize(function () {
-        $(howItWorksBubbles).css('left', 0.5*$(firstOfHowItWorksSections).width() - 0.5*$(howItWorksBubbles).width() + 50);
-    });
-
-
-
-
-
-
-
 
 });

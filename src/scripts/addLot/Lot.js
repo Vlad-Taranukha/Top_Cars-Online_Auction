@@ -44,8 +44,13 @@ export default class Lot {
         this.imageSrc = imageSrc;
 
         this.timeLeft = 0;
+        this.bids = [];
     }
 
+    placeBid(bid){
+        let userId = Math.floor(Math.random() * (100)) + 1;
+        this.bids.push({'userId' : userId, 'bid' : bid});
+    }
 
     lotTimer(){
         if (this.timeLeft <= 0){
@@ -66,6 +71,17 @@ export default class Lot {
             let resTime = setTimerFormat(this.timeLeft);
             let resTimeStr = resTime[0]+"d. "+resTime[1]+"h. "+resTime[2]+"m. "+resTime[3]+"s";
             $('.car_item_timer_'+this.vin).html("Time left: "+resTimeStr);
+        }
+    }
+
+    lotTimerForSinglePage(){
+        if (this.timeLeft <= 0){
+            $('.single_car_time_left_'+this.vin).html("Auction finished...");
+        }else{
+            this.timeLeft--;
+            let resTime = setTimerFormat(this.timeLeft);
+            let resTimeStr = resTime[0]+"d. "+resTime[1]+"h. "+resTime[2]+"m. "+resTime[3]+"s";
+            $('.single_car_time_left_'+this.vin).html(resTimeStr);
         }
 
     }

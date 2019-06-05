@@ -6,11 +6,11 @@ function fullFillContent(obj) {
         $('.cars_list').append("" +
             "<div class='car_item'>" +
             "<div class='car_item_img'>" +
-            "<a href='#'><img src='"+obj.imageSrc+"' alt=''></a>" +
+            "<a href='#car"+obj.vin+"'><img src='"+obj.imageSrc+"' alt=''></a>" +
             "</div>" +
             "<div class='car_item_info'>" +
             "<h3>" +
-            "<a href='#'>"+obj.name+" "+obj.model+"</a>" +
+            "<a href='#car"+obj.vin+"'>"+obj.name+" "+obj.model+"</a>" +
             "<span class='car_item_timer car_item_timer_"+obj.vin+"'>Time left </span>" +
             "<span class='car_item_year'>"+obj.year+"</span>" +
             "</h3>" +
@@ -37,11 +37,11 @@ function fullFillContent(obj) {
             "<div class='car_item_bid_info'>" +
             "<div class='car_item_buy_for_a_fixed_price'>" +
             "<p>Fixed Price <span>$"+obj.fixedPrice+"</span></p>" +
-            "<p><a class='car_item_fixed_price_buy_now_btn' href='#'>Buy Now</a></p>" +
+            "<p><a class='car_item_fixed_price_buy_now_btn' href='#car"+obj.vin+"'>Buy Now</a></p>" +
             "</div>" +
             "<div class='car_item_bid_block'>" +
             "<p>Current Bid <span>$"+obj.minimalBid+"</span></p>" +
-            "<p><a class='car_item_bid_now_btn' href='#'>Bid Now</a></p>" +
+            "<p><a class='car_item_bid_now_btn' href='#car"+obj.vin+"'>Bid Now</a></p>" +
             "</div>" +
             "</div>" +
             "</div>" +

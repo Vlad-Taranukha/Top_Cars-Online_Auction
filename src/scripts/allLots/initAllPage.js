@@ -6,7 +6,7 @@ import getPagination from "./pagination";
 import sortLots from "./sorting";
 import wrapSpans from "./wrapSpans";
 import initFilters from "./filtrationInit";
-import backToTopBtn from "../backToTop";
+import backToTopBtn from "./backToTop";
 
 
 function initAllPage() {
