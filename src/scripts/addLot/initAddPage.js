@@ -3,6 +3,7 @@ import setTimerFormat from "../timerFormat";
 import addLot from "./addLot";
 import setInputEqualWidth from "./setInputEqualWidth";
 import createLot from "./createLot";
+import showHideLotInfo from "./showHideLotInfo";
 
 
 function initAddPage() {
@@ -155,11 +156,14 @@ function initAddPage() {
             $('.timer_wrapper').eq(i).css({'opacity':0, 'display':'flex'});
             $('.timer_wrapper').eq(i).animate({opacity:1},10000);
         }
+
+        showHideLotInfo();
     });
 
     addLot();
     setInputEqualWidth();
     createLot();
+
 
 }
 

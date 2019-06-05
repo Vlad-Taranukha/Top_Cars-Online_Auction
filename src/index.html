@@ -124,13 +124,18 @@
             </div>
             <div class="menu_and_search_block">
                 <div class="search_block">
-                    <form action="">
-                        <input type="text" name="searchString" placeholder="Search by Mark, Model, VIN">
+                    <form action="" id="header_search_form" method="POST">
+                        <input
+                                type="text"
+                                name="searchString"
+                                id="header_search_form_input"
+                                placeholder="Search by Mark and Model"
+                                minlength="3">
                         <input type="submit" value="Search">
                     </form>
                 </div>
                 <div class="vehicles_on_sale">
-                    <p>"Top Cars" has over <span>1</span><span>0</span><span>0</span> vehicles on sale</p>
+                    <p>"Top Cars" has <span id="cars_on_sale"></span> vehicles on sale</p>
                 </div>
                 <nav class="main_menu">
                     <ul>
@@ -142,7 +147,7 @@
                                 <li><a href="#">3</a></li>
                             </ul>
                         </li>
-                        <li><a href="#all">Services</a></li>
+                        <li><a href="#single">Services</a></li>
                         <li><a href="">Technical Support</a>
                             <ul>
                                 <li><a href="#">Video</a></li>
@@ -162,7 +167,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="#single">Contact Us</a></li>
+                        <li><a href="#contacts">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -219,22 +224,12 @@
             <div class="search_forms">
                 <div class="vehicle_finder_form">
                     <h2>Vehicle Finder</h2>
-                    <form action="" method="GET">
+                    <form action="" method="POST" id="vehicle_finder_form">
                         <p>
                             <label>
                                 Please, select car maker:
-                                <select name="make" id="make_select">
+                                <select name="make" id="make_select" required>
                                     <option value="" selected></option>
-                                    <!--<option value="BMW">BMW</option>-->
-                                    <!--<option value="Audi">Audi</option>-->
-                                    <!--<option value="Mercedes-Benz">Mercedes-Benz</option>-->
-                                    <!--<option value="Nissan">Nissan</option>-->
-                                    <!--<option value="Alfa Romeo">Alfa Romeo</option>-->
-                                    <!--<option value="Mitsubishi">Mitsubishi</option>-->
-                                    <!--<option value="Kia">Kia</option>-->
-                                    <!--<option value="Mazda">Mazda</option>-->
-                                    <!--<option value="Opel">Opel</option>-->
-                                    <!--<option value="Volkswagen">Volkswagen</option>-->
                                 </select>
                             </label>
                         </p>
@@ -243,16 +238,6 @@
                                 Please, select car model:
                                 <select name="model" id="model_select" disabled>
                                     <option value=""></option>
-                                    <!--<option value="1">1</option>-->
-                                    <!--<option value="2">2</option>-->
-                                    <!--<option value="3">3</option>-->
-                                    <!--<option value="4">4</option>-->
-                                    <!--<option value="5">5</option>-->
-                                    <!--<option value="6">6</option>-->
-                                    <!--<option value="7">7</option>-->
-                                    <!--<option value="8">8</option>-->
-                                    <!--<option value="9">9</option>-->
-                                    <!--<option value="10">10</option>-->
                                 </select>
                             </label>
                         </p>
@@ -286,9 +271,9 @@
                 </div>
                 <div class="search_by_vin_form">
                     <h2>Look Up VIN</h2>
-                    <form action="" method="get">
+                    <form action="" method="POST" id="search_by_vin_form">
                         <p>
-                            <input type="text" name="vin" placeholder="VIN number...">
+                            <input type="text" id="search_by_vin_vinValue" placeholder="VIN number..." required minlength="8" maxlength="8">
                         </p>
                         <p>
                             <input type="submit" value="Search by VIN">
@@ -443,135 +428,98 @@
             <div class="all_cars">
                 <div class="filter_options">
                     <h3>Filter Options <span></span></h3>
-                    <form action="">
+                    <form action="" method="POST" id="filter_form">
                         <section class="make">
                             <h4>Make</h4>
                             <div class="make_list">
-                                <p><input type="checkbox"> BMW</p>
-                                <p><input type="checkbox"> Audi</p>
-                                <p><input type="checkbox"> Mercedes-Benz</p>
-                                <p><input type="checkbox"> Toyota</p>
-                                <p><input type="checkbox"> Nissan</p>
+                                <p><select name="" id="filter_select_name"></select></p>
                             </div>
                         </section>
                         <section class="model">
                             <h4>Model</h4>
                             <div class="model_list">
-                                <p><input type="checkbox"> BMW</p>
-                                <p><input type="checkbox"> Audi</p>
-                                <p><input type="checkbox"> Mercedes-Benz</p>
-                                <p><input type="checkbox"> Toyota</p>
-                                <p><input type="checkbox"> Nissan</p>
+                                <p><select name="" id="filter_select_model" disabled>
+                                </select></p>
                             </div>
                         </section>
                         <section class="year">
                             <h4>Year</h4>
                             <div class="year_list">
-                                <p><input type="checkbox"> 2000</p>
-                                <p><input type="checkbox"> 2001</p>
-                                <p><input type="checkbox"> 2002</p>
-                                <p><input type="checkbox"> 2003</p>
-                                <p><input type="checkbox"> 2004</p>
+                                <p><select name="" id="filter_select_year"></select></p>
                             </div>
                         </section>
                         <section class="mileage">
-                            <h4>Mileage</h4>
+                            <h4>Mileage (km.)</h4>
                             <div class="mileage_list">
-                                <p><input type="checkbox"> less 5000 km.</p>
-                                <p><input type="checkbox"> from 5001 to 10000 km.</p>
-                                <p><input type="checkbox"> from 10001 to 15000 km.</p>
-                                <p><input type="checkbox"> from 15001 to 20000 km.</p>
-                                <p><input type="checkbox"> from 20001 to 25000 km.</p>
+                                <p><label for="filter_select_mileageFrom">From</label></p>
+                                <p><input type="text" id="filter_select_mileageFrom" maxlength="7" value=""></p>
+                                <p><label for="filter_select_mileageTo">To</label></p>
+                                <p><input type="text" id="filter_select_mileageTo" maxlength="7" value=""></p>
                             </div>
                         </section>
                         <section class="location">
                             <h4>Location</h4>
                             <div class="location_list">
-                                <p><input type="checkbox"> Kyiv</p>
-                                <p><input type="checkbox"> Odessa</p>
-                                <p><input type="checkbox"> Donetsk</p>
-                                <p><input type="checkbox"> Lviv</p>
-                                <p><input type="checkbox"> Vinnytsia</p>
+                                <p><select name="" id="filter_select_location"></select></p>
                             </div>
                         </section>
                         <section class="body_style">
                             <h4>Body Style</h4>
                             <div class="body_style_list">
-                                <p><input type="checkbox"> Cabrio/Roadster</p>
-                                <p><input type="checkbox"> SUV</p>
-                                <p><input type="checkbox"> Pick-Up</p>
-                                <p><input type="checkbox"> Sedan</p>
-                                <p><input type="checkbox"> 2d Coupe</p>
-                                <p><input type="checkbox"> 4d Coupe</p>
-                                <p><input type="checkbox"> Estate Car</p>
-                                <p><input type="checkbox"> Hatchback</p>
-                                <p><input type="checkbox"> Van/Minibus</p>
+                                <p><select name="" id="filter_select_carType"></select></p>
                             </div>
                         </section>
                         <section class="fuel">
                             <h4>Fuel Type</h4>
                             <div class="fuel_type_list">
-                                <p><input type="checkbox"> Petrol</p>
-                                <p><input type="checkbox"> Diesel</p>
-                                <p><input type="checkbox"> Electric</p>
-                                <p><input type="checkbox"> LPG</p>
-                                <p><input type="checkbox"> Combined (petrol/LPG)</p>
-                                <p><input type="checkbox"> Hybrid (petrol/electric)</p>
+                                <p><select name="" id="filter_select_fuel"></select></p>
                             </div>
                         </section>
                         <section class="transmission">
                             <h4>Transmission</h4>
                             <div class="transmission_list">
-                                <p><input type="checkbox"> Automatic</p>
-                                <p><input type="checkbox"> Manual</p>
+                                <p>
+                                    <select name="" id="filter_select_gearbox">
+                                        <option value="" selected></option>
+                                        <option value="automatic">Automatic</option>
+                                        <option value="manual">Manual</option>
+                                    </select>
+                                </p>
                             </div>
                         </section>
                         <section class="cylinder">
                             <h4>Cylinder</h4>
                             <div class="cylinder_list">
-                                <p><input type="checkbox"> 3</p>
-                                <p><input type="checkbox"> 4</p>
-                                <p><input type="checkbox"> 5</p>
-                                <p><input type="checkbox"> 6</p>
-                                <p><input type="checkbox"> 8</p>
-                                <p><input type="checkbox"> 10</p>
-                                <p><input type="checkbox"> 12</p>
-                                <p><input type="checkbox"> 16</p>
+                                <p><select name="" id="filter_select_cylinder"></select></p>
                             </div>
                         </section>
                         <section class="drive_train">
                             <h4>Drive Train</h4>
                             <div class="drive_train_list">
-                                <p><input type="checkbox"> FWD</p>
-                                <p><input type="checkbox"> RWD</p>
-                                <p><input type="checkbox"> AWD</p>
-                                <p><input type="checkbox"> 4WD/FWD</p>
-                                <p><input type="checkbox"> 4WD/RWD</p>
+                                <p><select name="" id="filter_select_drive"></select></p>
                             </div>
                         </section>
                         <section class="engine_capacity">
                             <h4>Engine Capacity</h4>
                             <div class="engine_capacity_list">
-                                <p><input type="checkbox"> 0.7L.</p>
-                                <p><input type="checkbox"> 1L.</p>
-                                <p><input type="checkbox"> 2L.</p>
-                                <p><input type="checkbox"> 3L.</p>
-                                <p><input type="checkbox"> 4L.</p>
-                                <p><input type="checkbox"> 5L.</p>
+                                <p><select name="" id="filter_select_engineCapacity"></select></p>
                             </div>
                         </section>
-
+                        <div class="filter_options_bottom_block">
+                            <p><input type="submit" value="Filter"></p>
+                        </div>
                     </form>
-                    <div class="filter_options_bottom_block"></div>
+
                 </div>
                 <div class="cars">
-                    <h3>100500 cars are on sale now!</h3>
+                    <h3>cars are on sale now!</h3>
                     <div class="cars_display_settings">
                         <div class="cars_sorting">
                             <form action="">
                                 <div>
                                     Sort By:
                                     <select name="sorting" id="sort_cars_select">
+                                        <option value="">---</option>
                                         <option value="1">Price: from low to high</option>
                                         <option value="2">Price: from high to low</option>
                                         <option value="3">Mileage: from low to high</option>
@@ -582,21 +530,15 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="cars_pagination">
+                        <!--<div class="cars_pagination">
                             <ul>
-                                <li><a href="#">First</a></li>
+                               &lt;!&ndash; <li><a href="#">First</a></li>
                                 <li><a href="#">Previous</a></li>
                                 <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a>...</a></li>
-                                <li><a href="#">98</a></li>
-                                <li><a href="#">99</a></li>
-                                <li><a href="#">100</a></li>
                                 <li><a href="#">Next</a></li>
-                                <li><a href="#">Last</a></li>
+                                <li><a href="#">Last</a></li>&ndash;&gt;
                             </ul>
-                        </div>
+                        </div>-->
                     </div>
 
                     <div class="cars_list">
@@ -646,17 +588,11 @@
                     </div>
                     <div class="cars_bottom_pagination">
                         <ul>
-                            <li><a href="#">First</a></li>
+                            <!--<li><a href="#">First</a></li>
                             <li><a href="#">Previous</a></li>
                             <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a>...</a></li>
-                            <li><a href="#">98</a></li>
-                            <li><a href="#">99</a></li>
-                            <li><a href="#">100</a></li>
                             <li><a href="#">Next</a></li>
-                            <li><a href="#">Last</a></li>
+                            <li><a href="#">Last</a></li>-->
                         </ul>
                     </div>
                 </div>
@@ -1320,6 +1256,203 @@
         </div>
 <!--End of "Lot List and Add lot" page structure        -->
 
+<!--"Lot List and Add lot" page structure         -->
+        <div class="search_page_wrapper">
+            <h3 class="search_page_header">search results</h3>
+            <div class="search_page_results_info">
+                <div class="search_page_results_for">
+                    <p>Results for: <span id="search_result_phrase"></span></p>
+                </div>
+                <div class="search_page_results_count">
+                    <p>
+                        <span id="number_of_lots_found"></span> lots found
+                    </p>
+                </div>
+            </div>
+            <div class="search_page_results">
+                <div class="cars_list">
+                   <!-- <div class="car_item">
+                            <div class="car_item_img">
+                                <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
+                            </div>
+                            <div class="car_item_info">
+                                <h3>
+                                    <a href="#">Mitsubishi outlander xl</a>
+                                    <span class="car_item_timer">Time left: 5d : 12h : 35min</span>
+                                    <span class="car_item_year">2017</span>
+                                </h3>
+                                <div class="car_item_data_and_bid_info">
+                                    <div class="car_item_data">
+                                        <div class="car_item_detailed_info">
+                                            <div class="car_item_engine_petrol_power">
+                                                <div class="car_item_engine">4.4L</div>
+                                                <div class="car_item_petrol">Petrol</div>
+                                                <div class="car_item_power">600 HP</div>
+                                            </div>
+                                            <div class="car_item_mileage_gearbox_drive">
+                                                <div class="car_item_mileage">125000 km.</div>
+                                                <div class="car_item_gearbox">Automatic</div>
+                                                <div class="car_item_drive">4WD/RWD</div>
+                                            </div>
+                                            <div class="car_item_location_body_style_damage">
+                                                <div class="car_item_location">Kyiv</div>
+                                                <div class="car_item_body_style">Sedan</div>
+                                                <div class="car_item_damage">Accident free</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="car_item_bid_info">
+                                        <div class="car_item_buy_for_a_fixed_price">
+                                            <p>Fixed Price <span>$100.000</span></p>
+                                            <p><a class="car_item_fixed_price_buy_now_btn" href="#">Buy Now</a></p>
+                                        </div>
+                                        <div class="car_item_bid_block">
+                                            <p>Current Bid <span>$1.000</span></p>
+                                            <p><a class="car_item_bid_now_btn" href="#">Bid Now</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="car_item">
+                        <div class="car_item_img">
+                            <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
+                        </div>
+                        <div class="car_item_info">
+                            <h3>
+                                <a href="#">Mitsubishi outlander xl</a>
+                                <span class="car_item_timer">Time left: 5d : 12h : 35min</span>
+                                <span class="car_item_year">2017</span>
+                            </h3>
+                            <div class="car_item_data_and_bid_info">
+                                <div class="car_item_data">
+                                    <div class="car_item_detailed_info">
+                                        <div class="car_item_engine_petrol_power">
+                                            <div class="car_item_engine">4.4L</div>
+                                            <div class="car_item_petrol">Petrol</div>
+                                            <div class="car_item_power">600 HP</div>
+                                        </div>
+                                        <div class="car_item_mileage_gearbox_drive">
+                                            <div class="car_item_mileage">125000 km.</div>
+                                            <div class="car_item_gearbox">Automatic</div>
+                                            <div class="car_item_drive">4WD/RWD</div>
+                                        </div>
+                                        <div class="car_item_location_body_style_damage">
+                                            <div class="car_item_location">Kyiv</div>
+                                            <div class="car_item_body_style">Sedan</div>
+                                            <div class="car_item_damage">Accident free</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car_item_bid_info">
+                                    <div class="car_item_buy_for_a_fixed_price">
+                                        <p>Fixed Price <span>$100.000</span></p>
+                                        <p><a class="car_item_fixed_price_buy_now_btn" href="#">Buy Now</a></p>
+                                    </div>
+                                    <div class="car_item_bid_block">
+                                        <p>Current Bid <span>$1.000</span></p>
+                                        <p><a class="car_item_bid_now_btn" href="#">Bid Now</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car_item">
+                        <div class="car_item_img">
+                            <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
+                        </div>
+                        <div class="car_item_info">
+                            <h3>
+                                <a href="#">Mitsubishi outlander xl</a>
+                                <span class="car_item_timer">Time left: 5d : 12h : 35min</span>
+                                <span class="car_item_year">2017</span>
+                            </h3>
+                            <div class="car_item_data_and_bid_info">
+                                <div class="car_item_data">
+                                    <div class="car_item_detailed_info">
+                                        <div class="car_item_engine_petrol_power">
+                                            <div class="car_item_engine">4.4L</div>
+                                            <div class="car_item_petrol">Petrol</div>
+                                            <div class="car_item_power">600 HP</div>
+                                        </div>
+                                        <div class="car_item_mileage_gearbox_drive">
+                                            <div class="car_item_mileage">125000 km.</div>
+                                            <div class="car_item_gearbox">Automatic</div>
+                                            <div class="car_item_drive">4WD/RWD</div>
+                                        </div>
+                                        <div class="car_item_location_body_style_damage">
+                                            <div class="car_item_location">Kyiv</div>
+                                            <div class="car_item_body_style">Sedan</div>
+                                            <div class="car_item_damage">Accident free</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car_item_bid_info">
+                                    <div class="car_item_buy_for_a_fixed_price">
+                                        <p>Fixed Price <span>$100.000</span></p>
+                                        <p><a class="car_item_fixed_price_buy_now_btn" href="#">Buy Now</a></p>
+                                    </div>
+                                    <div class="car_item_bid_block">
+                                        <p>Current Bid <span>$1.000</span></p>
+                                        <p><a class="car_item_bid_now_btn" href="#">Bid Now</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+<!--End of "Lot List and Add lot" page structure        -->
+
+<!--Contacts Page structure-->
+        <div class="contacts_page_wrapper">
+            <h3>Contacts</h3>
+            <div class="contacts_info_inner_wrapper">
+                <div class="contacts_map">
+                    <div class="map_no_internet">
+                        <h4>Map Block</h4>
+                        <p>No internet connection...</p>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.390701501831!2d28.467650193848684!3d49.234030665934306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b7ace9b7b29%3A0xd4c9080157ba1949!2sSky+Park!5e0!3m2!1sru!2sua!4v1559680865866!5m2!1sru!2sua" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="contacts_detailed_info">
+                    <div class="contacts_phone">
+                        <div class="contacts_phone_img"></div>
+                        <div class="contacts_phone_text">+38 (099) 777 - 77 - 77</div>
+                    </div>
+                    <div class="contacts_mail">
+                        <div class="contacts_mail_img"></div>
+                        <div class="contacts_mail_text">topcars@topcars.com</div>
+                    </div>
+                    <div class="contacts_location">
+                        <div class="contacts_location_img"></div>
+                        <div class="contacts_location_text">21000, Soborna street,<br> Vinnytsia, Ukraine</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts_writeUs_block">
+                <h4>Write Us</h4>
+                <form action="" method="POST" id="contacts_writeUs_form">
+                    <div class="contacts_writeUs_name">
+                        <p><label for="contacts_writeUs_full_name">Full Name</label></p>
+                        <p><input type="text" id="contacts_writeUs_full_name"></p>
+                    </div>
+                    <div class="contacts_writeUs_eMail">
+                        <p><label for="contacts_writeUs_email">E-mail</label></p>
+                        <p><input type="email" id="contacts_writeUs_email"></p>
+                    </div>
+                    <div class="contacts_writeUs_message">
+                        <p>Message</p>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="contacts_writeUs_submitBtn">
+                        <p class="contacts_page_submit"><input type="submit" value="Send"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+<!--End of Contacts Page Structure-->
     </main>
     <footer class="footer_block">
         <div class="footer_content">

@@ -1,9 +1,9 @@
 [
   {
-    "name": "bmw1",
+    "name": "bmw",
     "model": "m5",
 	"year": 2017,
-	"mileage": 25000,
+	"mileage": 2500,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -17,17 +17,17 @@
 	"power":600,
 	"minimalBid":2000,
 	"saleDate":"2019-06-31T23:15",
-	"fixedPrice": "100000",
+	"fixedPrice": "55",
 	"featured": true,
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "audi2",
+    "name": "audi",
     "model": "a7",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2015,
+	"mileage": 2000,
 	"damage": "All over",
-	"location": "vinnytsia",
+	"location": "kyiv",
 	"carType" : "sedan",
 	"fuel": "petrol",	
 	"gearbox": "manual",
@@ -39,17 +39,17 @@
 	"power":600,
 	"minimalBid":2000,
 	"saleDate":"2019-06-02T04:00",
-	"fixedPrice": "100000",
+	"fixedPrice": "7",
 	"featured": true,
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "mercedes3",
+    "name": "mercedes",
     "model": "e63",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2013,
+	"mileage": 7000,
 	"damage": "All over",
-	"location": "vinnytsia",
+	"location": "donetsk",
 	"carType" : "sedan",
 	"fuel": "petrol",	
 	"gearbox": "manual",
@@ -61,17 +61,17 @@
 	"power":600,
 	"minimalBid":2000,
 	"saleDate":"2019-08-31T23:15",
-	"fixedPrice": "100000",
+	"fixedPrice": "3",
 	"featured": true,
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "volkswagen4",
+    "name": "volkswagen",
     "model": "passat",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2019,
+	"mileage": 65000,
 	"damage": "All over",
-	"location": "vinnytsia",
+	"location": "lviv",
 	"carType" : "sedan",
 	"fuel": "petrol",	
 	"gearbox": "manual",
@@ -83,17 +83,17 @@
 	"power":600,
 	"minimalBid":2000,
 	"saleDate":"2019-08-31T23:15",
-	"fixedPrice": "100000",
+	"fixedPrice": "14",
 	"featured": true,
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmW5",
+    "name": "bmw",
     "model": "335i",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2019,
+	"mileage": 13000,
 	"damage": "All over",
-	"location": "vinnytsia",
+	"location": "odessa",
 	"carType" : "sedan",
 	"fuel": "petrol",	
 	"gearbox": "manual",
@@ -105,15 +105,15 @@
 	"power":600,
 	"minimalBid":2000,
 	"saleDate":"2019-08-31T23:15",
-	"fixedPrice": "100000",
+	"fixedPrice": "11",
 	"featured": true,
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "toyota6",
+    "name": "toyota",
     "model": "corolla",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2007,
+	"mileage": 136000,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -127,15 +127,15 @@
 	"power":600,
 	"minimalBid":2000,
 	"saleDate":"2019-08-31T23:15",
-	"fixedPrice": "100000",
+	"fixedPrice": "9",
 	"featured": true,
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmw7",
+    "name": "bmw",
     "model": "336i",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2005,
+	"mileage": 25,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -149,15 +149,15 @@
 	"power":600,
 	"minimalBid":2000,
 	"saleDate":"2019-08-31T23:15",
-	"fixedPrice": "100000",
+	"fixedPrice": "3",
 	"featured": true,
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmw8",
+    "name": "bmw",
     "model": "m5",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2019,
+	"mileage": 0,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -171,15 +171,15 @@
 	"power":600,
 	"minimalBid":2000,
 	"saleDate":"2019-08-31T23:15",
-	"fixedPrice": "100000",
+	"fixedPrice": "21",
 	"featured": true,
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "audi9",
+    "name": "audi",
     "model": "a7",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2004,
+	"mileage": 75632,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -193,15 +193,15 @@
 	"power":600,
 	"minimalBid":2000,
 	"saleDate":"2019-08-31T23:15",
-	"fixedPrice": "100000",
+	"fixedPrice": "35",
 	"featured": true,
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "mercedes10",
+    "name": "mercedes",
     "model": "e63",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2001,
+	"mileage": 2323,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -215,15 +215,15 @@
 	"power":600,
 	"minimalBid":2000,
 	"saleDate":"2019-08-31T23:15",
-	"fixedPrice": "100000",
+	"fixedPrice": "17",
 	"featured": true,
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "volkswagen11",
+    "name": "volkswagen",
     "model": "passat",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2004,
+	"mileage": 23565,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -242,10 +242,10 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmW12",
+    "name": "bmw",
     "model": "335i",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2005,
+	"mileage": 45342,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -264,10 +264,10 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "toyota13",
+    "name": "toyota",
     "model": "corolla",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2011,
+	"mileage": 8866,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -286,10 +286,10 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmw14",
+    "name": "bmw",
     "model": "m5",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2018,
+	"mileage": 5390,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -308,10 +308,10 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "audi15",
+    "name": "audi",
     "model": "a7",
-	"year": 2017,
-	"mileage": 25000,
+	"year": 2016,
+	"mileage": 8543,
 	"damage": "All over",
 	"location": "vinnytsia",
 	"carType" : "sedan",
@@ -330,9 +330,9 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "mercedes16",
+    "name": "mercedes",
     "model": "e63",
-	"year": 2017,
+	"year": 2014,
 	"mileage": 25000,
 	"damage": "All over",
 	"location": "vinnytsia",
@@ -352,9 +352,9 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "volkswagen17",
+    "name": "volkswagen",
     "model": "passat",
-	"year": 2017,
+	"year": 2012,
 	"mileage": 25000,
 	"damage": "All over",
 	"location": "vinnytsia",
@@ -374,9 +374,9 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmW18",
+    "name": "bmw",
     "model": "335i",
-	"year": 2017,
+	"year": 2007,
 	"mileage": 25000,
 	"damage": "All over",
 	"location": "vinnytsia",
@@ -396,7 +396,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "toyota19",
+    "name": "toyota",
     "model": "corolla",
 	"year": 2017,
 	"mileage": 25000,
@@ -418,7 +418,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmw20",
+    "name": "bmw",
     "model": "336i",
 	"year": 2017,
 	"mileage": 25000,
@@ -440,7 +440,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmw21",
+    "name": "bmw",
     "model": "m5",
 	"year": 2017,
 	"mileage": 25000,
@@ -462,7 +462,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "audi22",
+    "name": "audi",
     "model": "a7",
 	"year": 2017,
 	"mileage": 25000,
@@ -484,7 +484,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "mercedes23",
+    "name": "mercedes",
     "model": "e63",
 	"year": 2017,
 	"mileage": 25000,
@@ -506,7 +506,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "volkswagen24",
+    "name": "volkswagen",
     "model": "passat",
 	"year": 2017,
 	"mileage": 25000,
@@ -528,7 +528,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmW25",
+    "name": "bmw",
     "model": "335i",
 	"year": 2017,
 	"mileage": 25000,
@@ -550,7 +550,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "toyota26",
+    "name": "toyota",
     "model": "corolla",
 	"year": 2017,
 	"mileage": 25000,
@@ -572,7 +572,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmw27",
+    "name": "bmw",
     "model": "m5",
 	"year": 2017,
 	"mileage": 25000,
@@ -594,7 +594,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "audi28",
+    "name": "audi",
     "model": "a7",
 	"year": 2017,
 	"mileage": 25000,
@@ -616,7 +616,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "mercedes29",
+    "name": "mercedes",
     "model": "e63",
 	"year": 2017,
 	"mileage": 25000,
@@ -638,7 +638,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "volkswagen30",
+    "name": "volkswagen",
     "model": "passat",
 	"year": 2017,
 	"mileage": 25000,
@@ -660,7 +660,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmW31",
+    "name": "bmw",
     "model": "335i",
 	"year": 2017,
 	"mileage": 25000,
@@ -682,7 +682,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "toyota32",
+    "name": "toyota",
     "model": "corolla",
 	"year": 2017,
 	"mileage": 25000,
@@ -704,7 +704,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmW33",
+    "name": "bmw",
     "model": "335i",
 	"year": 2017,
 	"mileage": 25000,
@@ -726,7 +726,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "toyota34",
+    "name": "toyota",
     "model": "corolla",
 	"year": 2017,
 	"mileage": 25000,
@@ -748,7 +748,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmw35",
+    "name": "bmw",
     "model": "336i",
 	"year": 2017,
 	"mileage": 25000,
@@ -770,7 +770,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmw36",
+    "name": "bmw",
     "model": "m5",
 	"year": 2017,
 	"mileage": 25000,
@@ -792,7 +792,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "audi37",
+    "name": "audi",
     "model": "a7",
 	"year": 2017,
 	"mileage": 25000,
@@ -814,7 +814,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "mercedes38",
+    "name": "mercedes",
     "model": "e63",
 	"year": 2017,
 	"mileage": 25000,
@@ -836,7 +836,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "volkswagen39",
+    "name": "volkswagen",
     "model": "passat",
 	"year": 2017,
 	"mileage": 25000,
@@ -858,7 +858,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmW40",
+    "name": "bmw",
     "model": "335i",
 	"year": 2017,
 	"mileage": 25000,
@@ -880,7 +880,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "toyota41",
+    "name": "toyota",
     "model": "corolla",
 	"year": 2017,
 	"mileage": 25000,
@@ -902,7 +902,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmw42",
+    "name": "bmw",
     "model": "m5",
 	"year": 2017,
 	"mileage": 25000,
@@ -924,7 +924,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "audi43",
+    "name": "audi",
     "model": "a7",
 	"year": 2017,
 	"mileage": 25000,
@@ -946,7 +946,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "mercedes44",
+    "name": "mercedes",
     "model": "e63",
 	"year": 2017,
 	"mileage": 25000,
@@ -968,7 +968,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "volkswagen45",
+    "name": "volkswagen",
     "model": "passat",
 	"year": 2017,
 	"mileage": 25000,
@@ -990,7 +990,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "bmW46",
+    "name": "bmw",
     "model": "335i",
 	"year": 2017,
 	"mileage": 25000,
@@ -1012,7 +1012,7 @@
 	"imageSrc": "images/bmw6.jpg"
   },
   {
-    "name": "toyota47",
+    "name": "toyota",
     "model": "corolla",
 	"year": 2017,
 	"mileage": 25000,

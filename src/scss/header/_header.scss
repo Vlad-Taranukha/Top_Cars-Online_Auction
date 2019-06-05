@@ -561,6 +561,10 @@ header{
         @media all and (max-width: 525px){
           padding: 10px 5px;
         }
+        @media all and (max-width: 450px){
+          padding: 10px 0;
+        }
+
 
         p{
           font-weight: bold;
@@ -579,9 +583,12 @@ header{
           @media all and (max-width: 525px){
             font-size: 16px;
           }
+          @media all and (max-width: 450px){
+            font-size: 14px;
+          }
 
 
-          span{
+          span span{
             font-size: 26px;
             font-weight: bold;
             display: inline-block;
@@ -599,6 +606,9 @@ header{
             }
             @media all and (max-width: 525px){
               font-size: 18px;
+            }
+            @media all and (max-width: 450px){
+              font-size: 16px;
             }
           }
         }
@@ -695,7 +705,7 @@ header{
   .main_menu_toggler{
     display: none;
     padding: 5px 50px;
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
     justify-content: space-between;
     background: #264D9A;
     -webkit-box-shadow: 0 0 4px 1px #264D9A;

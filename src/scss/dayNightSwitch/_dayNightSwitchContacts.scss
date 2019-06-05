@@ -1,0 +1,198 @@
+.contacts_page_wrapper_day{
+  h3{
+    background: #264D9A;
+  }
+
+
+  .contacts_info_inner_wrapper{
+
+    .contacts_detailed_info{
+
+      div{
+
+        .contacts_phone_img{
+          background: url("../images/footer_tel.png") center center no-repeat;
+        }
+
+        .contacts_mail_img{
+          background: url("../images/footer_mail.png") center center no-repeat;
+        }
+
+        .contacts_location_img{
+          background: url("../images/footer_location.png") center center no-repeat;
+        }
+
+        div{
+          color: #264D9A;
+
+        }
+      }
+    }
+
+  }
+
+  .contacts_writeUs_block{
+    background: #264D9A;
+
+
+    h4{
+      color: #fff;
+      -webkit-box-shadow: 0 2px 8px 2px #fff;
+      -moz-box-shadow: 0 2px 8px 2px #fff;
+      box-shadow: 0 2px 8px 2px #fff;
+    }
+    form{
+      div{
+
+        p{
+          color: #fff;
+
+          input[type="text"], input[type="email"]{
+            border: 2px solid #264D9A;
+            -webkit-box-shadow: 0 0 4px 2px #fff;
+            -moz-box-shadow: 0 0 4px 2px #fff;
+            box-shadow: 0 0 4px 2px #fff;
+
+            &:focus{
+              -webkit-box-shadow: 0 0 8px 2px #fff;
+              -moz-box-shadow: 0 0 8px 2px #fff;
+              box-shadow: 0 0 8px 2px #fff;
+            }
+          }
+
+          input[type="submit"]{
+            background: none;
+            border: 2px solid #fff;
+            color: #fff;
+
+            &:hover{
+              background: #fff;
+              color: #264D9A;
+            }
+
+
+          }
+        }
+
+        textarea{
+          border: 2px solid #264D9A;
+          -webkit-box-shadow: 0 0 4px 2px #fff;
+          -moz-box-shadow: 0 0 4px 2px #fff;
+          box-shadow: 0 0 4px 2px #fff;
+
+          &:focus{
+            -webkit-box-shadow: 0 0 8px 2px #fff;
+            -moz-box-shadow: 0 0 8px 2px #fff;
+            box-shadow: 0 0 8px 2px #fff;
+          }
+        }
+
+
+      }
+    }
+  }
+
+}
+
+
+
+.contacts_page_wrapper_night{
+  h3{
+    background: rgba(29, 29, 31, 0.75);
+    -webkit-box-shadow: 0 0 4px 1px #fff;
+    -moz-box-shadow: 0 0 4px 1px #fff;
+    box-shadow: 0 0 4px 1px #fff;
+  }
+
+
+  .contacts_info_inner_wrapper{
+
+    .contacts_detailed_info{
+
+      div{
+
+        .contacts_phone_img{
+          background: url("../images/footer_phone_night.png") center center no-repeat;
+        }
+
+        .contacts_mail_img{
+          background: url("../images/footer_mail_night.png") center center no-repeat;
+        }
+
+        .contacts_location_img{
+          background: url("../images/footer_location_night.png") center center no-repeat;
+        }
+
+        div{
+          color: #fff;
+
+        }
+      }
+    }
+
+  }
+
+  .contacts_writeUs_block{
+    background: rgba(29, 29, 31, 0.75);
+    -webkit-box-shadow: 0 0 2px 0.5px #fff;
+    -moz-box-shadow: 0 0 2px 0.5px #fff;
+    box-shadow: 0 0 2px 0.5px #fff;
+
+    h4{
+      color: #fff;
+      -webkit-box-shadow: 0 2px 4px 1px #fff;
+      -moz-box-shadow: 0 2px 4px 1px #fff;
+      box-shadow: 0 2px 4px 1px #fff;
+    }
+    form{
+      div{
+
+        p{
+          color: #fff;
+
+          input[type="text"], input[type="email"]{
+            border: 2px solid #1d1d1f;
+            -webkit-box-shadow: 0 0 2px 1px #fff;
+            -moz-box-shadow: 0 0 2px 1px #fff;
+            box-shadow: 0 0 2px 1px #fff;
+
+            &:focus{
+              -webkit-box-shadow: 0 0 4px 2px #fff;
+              -moz-box-shadow: 0 0 4px 2px #fff;
+              box-shadow: 0 0 4px 2px #fff;
+            }
+          }
+
+          input[type="submit"]{
+            background: none;
+            border: 2px solid #fff;
+            color: #fff;
+
+            &:hover{
+              background: #fff;
+              color: #1d1d1f;
+            }
+
+
+          }
+        }
+
+        textarea{
+          border: 2px solid #1d1d1f;
+          -webkit-box-shadow: 0 0 2px 1px #fff;
+          -moz-box-shadow: 0 0 2px 1px #fff;
+          box-shadow: 0 0 2px 1px #fff;
+
+          &:focus{
+            -webkit-box-shadow: 0 0 4px 2px #fff;
+            -moz-box-shadow: 0 0 4px 2px #fff;
+            box-shadow: 0 0 4px 2px #fff;
+          }
+        }
+
+
+      }
+    }
+  }
+
+}

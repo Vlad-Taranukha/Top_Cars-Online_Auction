@@ -1,0 +1,275 @@
+.search_page_wrapper_day{
+
+  h3{
+    background: #264D9A;
+  }
+
+  .search_page_results_info{
+    color: #264D9A;
+    border-bottom: 2px solid #264D9A;
+
+    div{
+      p{
+        span{
+          background: #264D9A;
+          color: #fff;
+        }
+      }
+    }
+
+
+
+
+  }
+
+  .search_page_results{
+    .cars_list{
+
+      .showMore{
+        border: 2px solid #264D9A;
+        background: #264D9A;
+
+        &:hover{
+          -webkit-box-shadow: 0 0 4px 1px #264D9A;
+          -moz-box-shadow: 0 0 4px 1px #264D9A;
+          box-shadow: 0 0 4px 1px #264D9A;
+        }
+      }
+
+      .car_item{
+
+        .car_item_info{
+          border: 2px solid #264D9A;
+          border-left: none;
+
+          @media all and(max-width:900px){
+            border: none;
+
+          }
+
+          h3{
+
+            a{
+              color: #fff;
+            }
+
+            .car_item_timer{
+              color: #fff;
+            }
+
+            .car_item_year{
+              color: #fff;
+            }
+          }
+
+          .car_item_data_and_bid_info{
+            .car_item_data{
+
+              @media all and(max-width:900px){
+                background: none;
+                -webkit-box-shadow: 0 0 4px 1px #264D9A, inset  0 0 4px 1px #264D9A;
+                -moz-box-shadow: 0 0 4px 1px #264D9A, inset 0 0 4px 1px #264D9A;
+                box-shadow: 0 0 4px 1px #264D9A, inset  0 0 4px 1px #264D9A;
+
+              }
+
+              .car_item_detailed_info{
+                & div div{
+                  color: #264D9A;
+
+                  @media all and(max-width:480px){
+                    border-bottom: 1px solid #264D9A;
+                  }
+                }
+
+                .car_item_engine{
+                  background: url("../images/engine.png") left center no-repeat;
+                }
+                .car_item_petrol{
+                  background: url("../images/fuel.png") left center no-repeat;
+                }
+                .car_item_power{
+                  background: url("../images/engine_power.png") left center no-repeat;
+                }
+                .car_item_mileage{
+                  background: url("../images/mileage.png") left center no-repeat;
+                }
+                .car_item_gearbox{
+                  background: url("../images/gearbox.png") left center no-repeat;
+                }
+                .car_item_drive{
+                  background: url("../images/drive.png") left center no-repeat;
+                }
+                .car_item_location{
+                  background: url("../images/location.png") left center no-repeat;
+                }
+                .car_item_body_style{
+                  background: url("../images/car_type.png") left center no-repeat;
+                }
+                .car_item_damage{
+                  background: url("../images/damage.png") left center no-repeat;
+                }
+              }
+            }
+
+            .car_item_bid_info{
+              background: #264D9A;
+
+
+              p{
+                color: #fff;
+
+                a{
+                  background: #fff;
+                  color: #264D9A;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+}
+.search_page_wrapper_night{
+
+  h3{
+    background: rgba(29, 29, 31, 0.75);
+  }
+
+  .search_page_results_info{
+    color: #fff;
+    border-bottom: 2px solid #fff;
+
+    div{
+      p{
+        span{
+          background: #fff;
+
+          color: #1d1d1f;
+        }
+      }
+    }
+
+  }
+
+  .search_page_results{
+    .cars_list{
+
+      .showMore{
+        border: 2px solid #fff;
+        background: rgba(29, 29, 31, 0.75);
+
+        &:hover{
+          -webkit-box-shadow: 0 0 4px 1px #fff;
+          -moz-box-shadow: 0 0 4px 1px #fff;
+          box-shadow: 0 0 4px 1px #fff;
+        }
+      }
+
+      .car_item{
+
+        .car_item_info{
+          border: 2px solid #fff;
+          border-left: none;
+
+          @media all and(max-width: 900px){
+            border-bottom: none;
+            border-right: none;
+          }
+
+          @media all and(max-width:360px){
+            border-top: none;
+          }
+
+          h3{
+            border-top: none;
+            border-left: none;
+            background: white;
+
+            a{
+              color: #1d1d1f;
+            }
+
+            .car_item_timer{
+              color: #1d1d1f;
+            }
+
+            .car_item_year{
+              color: #1d1d1f;
+            }
+          }
+
+          .car_item_data_and_bid_info{
+            background: rgba(29, 29, 31, 0.75);
+
+            @media all and(max-width: 900px){
+              background: none;
+            }
+
+            .car_item_data{
+
+              .car_item_detailed_info{
+
+
+                & div div{
+                  color: #fff;
+                }
+
+                .car_item_engine{
+                  background: url("../images/engine_night.png") left center no-repeat;
+                }
+                .car_item_petrol{
+                  background: url("../images/fuel_night.png") left center no-repeat;
+                }
+                .car_item_power{
+                  background: url("../images/engine_power_night.png") left center no-repeat;
+                }
+                .car_item_mileage{
+                  background: url("../images/mileage_night.png") left center no-repeat;
+                }
+                .car_item_gearbox{
+                  background: url("../images/gearbox_night.png") left center no-repeat;
+                }
+                .car_item_drive{
+                  background: url("../images/drive_night.png") left center no-repeat;
+                }
+                .car_item_location{
+                  background: url("../images/location_night.png") left center no-repeat;
+                }
+                .car_item_body_style{
+                  background: url("../images/car_type_night.png") left center no-repeat;
+                }
+                .car_item_damage{
+                  background: url("../images/damage_night.png") left center no-repeat;
+                }
+              }
+            }
+
+            .car_item_bid_info{
+              background: #fff;
+
+              p{
+                color: #1d1d1f;
+
+                a{
+                  background: #1d1d1f;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+}

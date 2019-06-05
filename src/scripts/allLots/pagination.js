@@ -24,8 +24,6 @@ function getPagination(pageCount){
         }
     }
 
-
-
     $('.cars_bottom_pagination').click(function (event) {
 
         $('.cars_list').empty();
@@ -33,8 +31,6 @@ function getPagination(pageCount){
         if (event.target.tagName != 'A') {return;}
         else{
             event.preventDefault();
-
-
 
             if (pageCount == 1){
                 return;
@@ -117,15 +113,8 @@ function getPagination(pageCount){
                                 if ($('.cars_bottom_pagination ul li').children('#bottomPaginationNext').length == 0){
                                     $('.cars_bottom_pagination ul').append("<li><a href='#' id='bottomPaginationNext'>Next</a></li>");
                                 }
-
                             }
-
-
-
                         }
-
-
-
                     }
 
                     if (event.target.innerHTML == 1 || event.target.innerText == "First"){
@@ -146,8 +135,6 @@ function getPagination(pageCount){
                         $('#bottomPaginationNext').remove();
                         $('#bottomPaginationLast').remove();
 
-
-
                         if ($('.cars_bottom_pagination ul li').children('#bottomPaginationPrevious').length == 0){
                             $('.cars_bottom_pagination ul').prepend("<li><a href='#' id='bottomPaginationPrevious'>Previous</a></li>");
                         }
@@ -155,10 +142,6 @@ function getPagination(pageCount){
                             $('.cars_bottom_pagination ul').prepend("<li><a href='#' id='bottomPaginationFirst'>First</a></li>");
                         }
 
-                    }
-                    
-                    if (event.target.innerHTML == "Previous"){
-                        //console.log(nowPage);
                     }
                 }
 

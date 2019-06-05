@@ -130,7 +130,7 @@
                     </form>
                 </div>
                 <div class="vehicles_on_sale">
-                    <p>"Top Cars" has over <span>1</span><span>0</span><span>0</span> vehicles on sale</p>
+                    <p>"Top Cars" has over <span id="cars_on_sale"></span> vehicles on sale</p>
                 </div>
                 <nav class="main_menu">
                     <ul>
@@ -142,7 +142,7 @@
                                 <li><a href="#">3</a></li>
                             </ul>
                         </li>
-                        <li><a href="#all">Services</a></li>
+                        <li><a href="#search">Services</a></li>
                         <li><a href="">Technical Support</a>
                             <ul>
                                 <li><a href="#">Video</a></li>
@@ -443,135 +443,98 @@
             <div class="all_cars">
                 <div class="filter_options">
                     <h3>Filter Options <span></span></h3>
-                    <form action="">
+                    <form action="" method="POST" id="filter_form">
                         <section class="make">
                             <h4>Make</h4>
                             <div class="make_list">
-                                <p><input type="checkbox"> BMW</p>
-                                <p><input type="checkbox"> Audi</p>
-                                <p><input type="checkbox"> Mercedes-Benz</p>
-                                <p><input type="checkbox"> Toyota</p>
-                                <p><input type="checkbox"> Nissan</p>
+                                <p><select name="" id="filter_select_name"></select></p>
                             </div>
                         </section>
                         <section class="model">
                             <h4>Model</h4>
                             <div class="model_list">
-                                <p><input type="checkbox"> BMW</p>
-                                <p><input type="checkbox"> Audi</p>
-                                <p><input type="checkbox"> Mercedes-Benz</p>
-                                <p><input type="checkbox"> Toyota</p>
-                                <p><input type="checkbox"> Nissan</p>
+                                <p><select name="" id="filter_select_model" disabled>
+                                </select></p>
                             </div>
                         </section>
                         <section class="year">
                             <h4>Year</h4>
                             <div class="year_list">
-                                <p><input type="checkbox"> 2000</p>
-                                <p><input type="checkbox"> 2001</p>
-                                <p><input type="checkbox"> 2002</p>
-                                <p><input type="checkbox"> 2003</p>
-                                <p><input type="checkbox"> 2004</p>
+                                <p><select name="" id="filter_select_year"></select></p>
                             </div>
                         </section>
                         <section class="mileage">
-                            <h4>Mileage</h4>
+                            <h4>Mileage (km.)</h4>
                             <div class="mileage_list">
-                                <p><input type="checkbox"> less 5000 km.</p>
-                                <p><input type="checkbox"> from 5001 to 10000 km.</p>
-                                <p><input type="checkbox"> from 10001 to 15000 km.</p>
-                                <p><input type="checkbox"> from 15001 to 20000 km.</p>
-                                <p><input type="checkbox"> from 20001 to 25000 km.</p>
+                                <p><label for="filter_select_mileageFrom">From</label></p>
+                                <p><input type="text" id="filter_select_mileageFrom" maxlength="7" value=""></p>
+                                <p><label for="filter_select_mileageTo">To</label></p>
+                                <p><input type="text" id="filter_select_mileageTo" maxlength="7" value=""></p>
                             </div>
                         </section>
                         <section class="location">
                             <h4>Location</h4>
                             <div class="location_list">
-                                <p><input type="checkbox"> Kyiv</p>
-                                <p><input type="checkbox"> Odessa</p>
-                                <p><input type="checkbox"> Donetsk</p>
-                                <p><input type="checkbox"> Lviv</p>
-                                <p><input type="checkbox"> Vinnytsia</p>
+                                <p><select name="" id="filter_select_location"></select></p>
                             </div>
                         </section>
                         <section class="body_style">
                             <h4>Body Style</h4>
                             <div class="body_style_list">
-                                <p><input type="checkbox"> Cabrio/Roadster</p>
-                                <p><input type="checkbox"> SUV</p>
-                                <p><input type="checkbox"> Pick-Up</p>
-                                <p><input type="checkbox"> Sedan</p>
-                                <p><input type="checkbox"> 2d Coupe</p>
-                                <p><input type="checkbox"> 4d Coupe</p>
-                                <p><input type="checkbox"> Estate Car</p>
-                                <p><input type="checkbox"> Hatchback</p>
-                                <p><input type="checkbox"> Van/Minibus</p>
+                                <p><select name="" id="filter_select_carType"></select></p>
                             </div>
                         </section>
                         <section class="fuel">
                             <h4>Fuel Type</h4>
                             <div class="fuel_type_list">
-                                <p><input type="checkbox"> Petrol</p>
-                                <p><input type="checkbox"> Diesel</p>
-                                <p><input type="checkbox"> Electric</p>
-                                <p><input type="checkbox"> LPG</p>
-                                <p><input type="checkbox"> Combined (petrol/LPG)</p>
-                                <p><input type="checkbox"> Hybrid (petrol/electric)</p>
+                                <p><select name="" id="filter_select_fuel"></select></p>
                             </div>
                         </section>
                         <section class="transmission">
                             <h4>Transmission</h4>
                             <div class="transmission_list">
-                                <p><input type="checkbox"> Automatic</p>
-                                <p><input type="checkbox"> Manual</p>
+                                <p>
+                                    <select name="" id="filter_select_gearbox">
+                                        <option value="" selected></option>
+                                        <option value="automatic">Automatic</option>
+                                        <option value="manual">Manual</option>
+                                    </select>
+                                </p>
                             </div>
                         </section>
                         <section class="cylinder">
                             <h4>Cylinder</h4>
                             <div class="cylinder_list">
-                                <p><input type="checkbox"> 3</p>
-                                <p><input type="checkbox"> 4</p>
-                                <p><input type="checkbox"> 5</p>
-                                <p><input type="checkbox"> 6</p>
-                                <p><input type="checkbox"> 8</p>
-                                <p><input type="checkbox"> 10</p>
-                                <p><input type="checkbox"> 12</p>
-                                <p><input type="checkbox"> 16</p>
+                                <p><select name="" id="filter_select_cylinder"></select></p>
                             </div>
                         </section>
                         <section class="drive_train">
                             <h4>Drive Train</h4>
                             <div class="drive_train_list">
-                                <p><input type="checkbox"> FWD</p>
-                                <p><input type="checkbox"> RWD</p>
-                                <p><input type="checkbox"> AWD</p>
-                                <p><input type="checkbox"> 4WD/FWD</p>
-                                <p><input type="checkbox"> 4WD/RWD</p>
+                                <p><select name="" id="filter_select_drive"></select></p>
                             </div>
                         </section>
                         <section class="engine_capacity">
                             <h4>Engine Capacity</h4>
                             <div class="engine_capacity_list">
-                                <p><input type="checkbox"> 0.7L.</p>
-                                <p><input type="checkbox"> 1L.</p>
-                                <p><input type="checkbox"> 2L.</p>
-                                <p><input type="checkbox"> 3L.</p>
-                                <p><input type="checkbox"> 4L.</p>
-                                <p><input type="checkbox"> 5L.</p>
+                                <p><select name="" id="filter_select_engineCapacity"></select></p>
                             </div>
                         </section>
-
+                        <div class="filter_options_bottom_block">
+                            <p><input type="submit" value="Filter"></p>
+                        </div>
                     </form>
-                    <div class="filter_options_bottom_block"></div>
+
                 </div>
                 <div class="cars">
-                    <h3>100500 cars are on sale now!</h3>
+                    <h3>cars are on sale now!</h3>
                     <div class="cars_display_settings">
                         <div class="cars_sorting">
                             <form action="">
                                 <div>
                                     Sort By:
                                     <select name="sorting" id="sort_cars_select">
+                                        <option value="">---</option>
                                         <option value="1">Price: from low to high</option>
                                         <option value="2">Price: from high to low</option>
                                         <option value="3">Mileage: from low to high</option>
@@ -582,25 +545,19 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="cars_pagination">
+                        <!--<div class="cars_pagination">
                             <ul>
-                                <li><a href="#">First</a></li>
+                               &lt;!&ndash; <li><a href="#">First</a></li>
                                 <li><a href="#">Previous</a></li>
                                 <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a>...</a></li>
-                                <li><a href="#">98</a></li>
-                                <li><a href="#">99</a></li>
-                                <li><a href="#">100</a></li>
                                 <li><a href="#">Next</a></li>
-                                <li><a href="#">Last</a></li>
+                                <li><a href="#">Last</a></li>&ndash;&gt;
                             </ul>
-                        </div>
+                        </div>-->
                     </div>
 
                     <div class="cars_list">
-                        <div class="car_item">
+                        <!--<div class="car_item">
                             <div class="car_item_img">
                                 <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
                             </div>
@@ -642,193 +599,15 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="car_item">
-                            <div class="car_item_img">
-                                <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
-                            </div>
-                            <div class="car_item_info">
-                                <h3>
-                                    <a href="#">BMW M5</a>
-                                    <span class="car_item_timer">Time left: 5d : 12h : 35min</span>
-                                    <span class="car_item_year">2017</span>
-                                </h3>
-                                <div class="car_item_data_and_bid_info">
-                                    <div class="car_item_data">
-                                        <div class="car_item_detailed_info">
-                                            <div class="car_item_engine_petrol_power">
-                                                <div class="car_item_engine">4.4L</div>
-                                                <div class="car_item_petrol">Petrol</div>
-                                                <div class="car_item_power">600 HP</div>
-                                            </div>
-                                            <div class="car_item_mileage_gearbox_drive">
-                                                <div class="car_item_mileage">125000 km.</div>
-                                                <div class="car_item_gearbox">Automatic</div>
-                                                <div class="car_item_drive">4WD/RWD</div>
-                                            </div>
-                                            <div class="car_item_location_body_style_damage">
-                                                <div class="car_item_location">Kyiv</div>
-                                                <div class="car_item_body_style">Sedan</div>
-                                                <div class="car_item_damage">Accident free</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="car_item_bid_info">
-                                        <div class="car_item_buy_for_a_fixed_price">
-                                            <p>Fixed Price <span>$100.000</span></p>
-                                            <p><a class="car_item_fixed_price_buy_now_btn" href="#">Buy Now</a></p>
-                                        </div>
-                                        <div class="car_item_bid_block">
-                                            <p>Current Bid <span>$1.000</span></p>
-                                            <p><a class="car_item_bid_now_btn" href="#">Bid Now</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="car_item">
-                            <div class="car_item_img">
-                                <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
-                            </div>
-                            <div class="car_item_info">
-                                <h3>
-                                    <a href="#">BMW M5</a>
-                                    <span class="car_item_timer">Time left: 5d : 12h : 35min</span>
-                                    <span class="car_item_year">2017</span>
-                                </h3>
-                                <div class="car_item_data_and_bid_info">
-                                    <div class="car_item_data">
-                                        <div class="car_item_detailed_info">
-                                            <div class="car_item_engine_petrol_power">
-                                                <div class="car_item_engine">4.4L</div>
-                                                <div class="car_item_petrol">Petrol</div>
-                                                <div class="car_item_power">600 HP</div>
-                                            </div>
-                                            <div class="car_item_mileage_gearbox_drive">
-                                                <div class="car_item_mileage">125000 km.</div>
-                                                <div class="car_item_gearbox">Automatic</div>
-                                                <div class="car_item_drive">4WD/RWD</div>
-                                            </div>
-                                            <div class="car_item_location_body_style_damage">
-                                                <div class="car_item_location">Kyiv</div>
-                                                <div class="car_item_body_style">Sedan</div>
-                                                <div class="car_item_damage">Accident free</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="car_item_bid_info">
-                                        <div class="car_item_buy_for_a_fixed_price">
-                                            <p>Fixed Price <span>$100.000</span></p>
-                                            <p><a class="car_item_fixed_price_buy_now_btn" href="#">Buy Now</a></p>
-                                        </div>
-                                        <div class="car_item_bid_block">
-                                            <p>Current Bid <span>$1.000</span></p>
-                                            <p><a class="car_item_bid_now_btn" href="#">Bid Now</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="car_item">
-                            <div class="car_item_img">
-                                <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
-                            </div>
-                            <div class="car_item_info">
-                                <h3>
-                                    <a href="#">BMW M5</a>
-                                    <span class="car_item_timer">Time left: 5d : 12h : 35min</span>
-                                    <span class="car_item_year">2017</span>
-                                </h3>
-                                <div class="car_item_data_and_bid_info">
-                                    <div class="car_item_data">
-                                        <div class="car_item_detailed_info">
-                                            <div class="car_item_engine_petrol_power">
-                                                <div class="car_item_engine">4.4L</div>
-                                                <div class="car_item_petrol">Petrol</div>
-                                                <div class="car_item_power">600 HP</div>
-                                            </div>
-                                            <div class="car_item_mileage_gearbox_drive">
-                                                <div class="car_item_mileage">125000 km.</div>
-                                                <div class="car_item_gearbox">Automatic</div>
-                                                <div class="car_item_drive">4WD/RWD</div>
-                                            </div>
-                                            <div class="car_item_location_body_style_damage">
-                                                <div class="car_item_location">Kyiv</div>
-                                                <div class="car_item_body_style">Sedan</div>
-                                                <div class="car_item_damage">Accident free</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="car_item_bid_info">
-                                        <div class="car_item_buy_for_a_fixed_price">
-                                            <p>Fixed Price <span>$100.000</span></p>
-                                            <p><a class="car_item_fixed_price_buy_now_btn" href="#">Buy Now</a></p>
-                                        </div>
-                                        <div class="car_item_bid_block">
-                                            <p>Current Bid <span>$1.000</span></p>
-                                            <p><a class="car_item_bid_now_btn" href="#">Bid Now</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="car_item">
-                            <div class="car_item_img">
-                                <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
-                            </div>
-                            <div class="car_item_info">
-                                <h3>
-                                    <a href="#">BMW M5</a>
-                                    <span class="car_item_timer">Time left: 5d : 12h : 35min</span>
-                                    <span class="car_item_year">2017</span>
-                                </h3>
-                                <div class="car_item_data_and_bid_info">
-                                    <div class="car_item_data">
-                                        <div class="car_item_detailed_info">
-                                            <div class="car_item_engine_petrol_power">
-                                                <div class="car_item_engine">4.4L</div>
-                                                <div class="car_item_petrol">Petrol</div>
-                                                <div class="car_item_power">600 HP</div>
-                                            </div>
-                                            <div class="car_item_mileage_gearbox_drive">
-                                                <div class="car_item_mileage">125000 km.</div>
-                                                <div class="car_item_gearbox">Automatic</div>
-                                                <div class="car_item_drive">4WD/RWD</div>
-                                            </div>
-                                            <div class="car_item_location_body_style_damage">
-                                                <div class="car_item_location">Kyiv</div>
-                                                <div class="car_item_body_style">Sedan</div>
-                                                <div class="car_item_damage">Accident free</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="car_item_bid_info">
-                                        <div class="car_item_buy_for_a_fixed_price">
-                                            <p>Fixed Price <span>$100.000</span></p>
-                                            <p><a class="car_item_fixed_price_buy_now_btn" href="#">Buy Now</a></p>
-                                        </div>
-                                        <div class="car_item_bid_block">
-                                            <p>Current Bid <span>$1.000</span></p>
-                                            <p><a class="car_item_bid_now_btn" href="#">Bid Now</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="cars_bottom_pagination">
                         <ul>
-                            <li><a href="#">First</a></li>
+                            <!--<li><a href="#">First</a></li>
                             <li><a href="#">Previous</a></li>
                             <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a>...</a></li>
-                            <li><a href="#">98</a></li>
-                            <li><a href="#">99</a></li>
-                            <li><a href="#">100</a></li>
                             <li><a href="#">Next</a></li>
-                            <li><a href="#">Last</a></li>
+                            <li><a href="#">Last</a></li>-->
                         </ul>
                     </div>
                 </div>
@@ -1289,166 +1068,105 @@
 
                             <div class="new_lot_form_maker">
                                 <p><label for="new_lot_form_car_maker">Make</label></p>
-                                <p><input type="text" id="new_lot_form_car_maker"></p>
+                                <p><select id="new_lot_form_car_maker" required></select></p>
                             </div>
                             <div class="new_lot_form_model">
                                 <p><label for="new_lot_form_car_model">Model</label></p>
-                                <p><input type="text" id="new_lot_form_car_model"></p>
+                                <p><select disabled id="new_lot_form_car_model" required></select></p>
                             </div>
                             <div class="new_lot_form_year">
                                 <p><label for="new_lot_form_car_year">Year</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_year">
-                                        <option value="" selected></option>
-                                        <option value="">2010</option>
-                                        <option value="">2011</option>
-                                        <option value="">2012</option>
-                                        <option value="">2013</option>
-                                        <option value="">2014</option>
+                                    <select id="new_lot_form_car_year" required>
+                                        <option value="" selected ></option>
                                     </select>
                                 </p>
                             </div>
                             <div class="new_lot_form_mileage">
                                 <p><label for="new_lot_form_car_mileage">Mileage  (km.)</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_mileage">
-                                        <option value=""></option>
-                                        <option value="">less 5000</option>
-                                        <option value="">from 5001 to 10000</option>
-                                        <option value="">from 10001 to 15000</option>
-                                        <option value="">from 15001 to 20000</option>
-                                        <option value="">from 20001 to 25000</option>
-                                    </select>
+                                    <input id="new_lot_form_car_mileage" min="0" type="text" maxlength="7" required>
                                 </p>
                             </div>
                             <div class="new_lot_form_damage">
                                 <p><label for="new_lot_form_car_damage">Damage</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_damage">
+                                    <select id="new_lot_form_car_damage" required>
                                         <option value=""></option>
-                                        <option value="">Normal Wear</option>
-                                        <option value="">Front End</option>
-                                        <option value="">Back End</option>
-                                        <option value="">Side</option>
-                                        <option value="">Roof</option>
-                                        <option value="">All Over</option>
-                                        <option value="">Burn</option>
-                                        <option value="">Mechanical</option>
-                                        <option value="">Hail</option>
-                                        <option value="">Scratches</option>
-                                        <option value="">Rollover</option>
-                                        <option value="">Undercarriage</option>
-                                        <option value="">Vandalism</option>
-                                        <option value="">Water/Flood</option>
+
                                     </select>
                                 </p>
                             </div>
                             <div class="new_lot_form_location">
                                 <p><label for="new_lot_form_car_location">Location</label></p>
-                                <p><input type="text" id="new_lot_form_car_location"></p>
+                                <p><select id="new_lot_form_car_location" required>
+                                    <option value="" selected></option>
+                                </select></p>
                             </div>
                             <div class="new_lot_form_vehicle_type">
                                 <p><label for="new_lot_form_car_type">Car Type</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_type">
-                                        <option value=""></option>
-                                        <option value="">Sedan</option>
-                                        <option value="">SUV</option>
-                                        <option value="">2d Coupe</option>
-                                        <option value="">4d Coupe</option>
-                                        <option value="">Hatchback</option>
-                                        <option value="">Cabrio/Roadster</option>
-                                        <option value="">Pick-Up</option>
-                                        <option value="">Estate Car</option>
-                                        <option value="">Van/Minibus</option>
-                                    </select>
+                                    <select id="new_lot_form_car_type" required></select>
                                 </p>
                             </div>
                             <div class="new_lot_form_fuel_type">
                                 <p><label for="new_lot_form_car_fuel">Fuel Type</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_fuel">
-                                        <option value=""></option>
-                                        <option value="">Petrol</option>
-                                        <option value="">Diesel</option>
-                                        <option value="">Electric</option>
-                                        <option value="">LPG</option>
-                                        <option value="">Combined (petrol/LPG)</option>
-                                        <option value="">Hybrid (petrol/electric)</option>
-                                    </select>
+                                    <select id="new_lot_form_car_fuel" required></select>
                                 </p>
                             </div>
                             <div class="new_lot_form_transmission">
                                 <p><label for="new_lot_form_car_transmission">Transmission</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_transmission">
-                                        <option value=""></option>
-                                        <option value="">Automatic</option>
-                                        <option value="">Manual</option>
-                                    </select>
+                                    <select id="new_lot_form_car_transmission" required></select>
                                 </p>
                             </div>
                             <div class="new_lot_form_cylinder">
                                 <p><label for="new_lot_form_car_cylinder">Cylinder</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_cylinder">
-                                        <option value=""></option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                        <option value="">5</option>
-                                        <option value="">6</option>
-                                        <option value="">8</option>
-                                        <option value="">10</option>
-                                        <option value="">12</option>
-                                        <option value="">16</option>
-                                    </select>
+                                    <select id="new_lot_form_car_cylinder" required></select>
                                 </p>
                             </div>
                             <div class="new_lot_form_drive_train">
                                 <p><label for="new_lot_form_car_drive">Drive Train</label></p>
                                 <p>
-                                    <select id="new_lot_form_car_drive">
-                                        <option value=""></option>
-                                        <option value="">FWD</option>
-                                        <option value="">RWD</option>
-                                        <option value="">AWD</option>
-                                        <option value="">4WD/FWD</option>
-                                        <option value="">4WD/RWD</option>
-                                    </select>
+                                    <select id="new_lot_form_car_drive" required></select>
                                 </p>
                             </div>
                             <div class="new_lot_form_engine">
                                 <p><label for="new_lot_form_car_engine">Engine Capacity</label></p>
-                                <p><input type="text" id="new_lot_form_car_engine"></p>
+                                <p>
+                                    <select id="new_lot_form_car_engine" required></select>
+                                </p>
                             </div>
                             <div class="new_lot_form_vin">
                                 <p><label for="new_lot_form_car_vin">VIN</label></p>
-                                <p><input type="text" id="new_lot_form_car_vin"></p>
+                                <p><input type="text" id="new_lot_form_car_vin" minlength="8" maxlength="8" required></p>
                             </div>
                             <div class="new_lot_form_color">
                                 <p><label for="new_lot_form_car_color">Color</label></p>
-                                <p><input type="text" id="new_lot_form_car_color"></p>
+                                <p><input type="text" id="new_lot_form_car_color" maxlength="15" required></p>
                             </div>
                             <div class="new_lot_form_power">
                                 <p><label for="new_lot_form_car_power">Power</label></p>
-                                <p><input type="text" id="new_lot_form_car_power"></p>
+                                <p><input type="text" id="new_lot_form_car_power" min="0" maxlength="4" required></p>
                             </div>
                             <div class="new_lot_form_min_bid">
                                 <p><label for="new_lot_form_car_min_bid">Minimal Bid ($)</label></p>
-                                <p><input type="text" id="new_lot_form_car_min_bid"></p>
+                                <p><input type="text" id="new_lot_form_car_min_bid" maxlength="10" min="0" required></p>
                             </div>
                             <div class="new_lot_form_sale_date">
                                 <p><label for="new_lot_form_car_sale_date">Sale Date</label></p>
-                                <p><input type="datetime-local" id="new_lot_form_car_sale_date"></p>
+                                <p><input type="datetime-local" id="new_lot_form_car_sale_date" required></p>
                             </div>
                             <div class="new_lot_form_fixed_price">
                                 <p><label for="new_lot_form_car_fixed_price">Fixed Price  ($)</label></p>
-                                <p><input type="text" id="new_lot_form_car_fixed_price"></p>
+                                <p><input type="text" id="new_lot_form_car_fixed_price" required></p>
                             </div>
                             <div class="new_lot_form_photos">
                                 <p><label for="new_lot_form_car_photos">Photos</label></p>
                                 <div id="new_lot_form_car_photos">
-                                    <p><input type="checkbox"> <input type="checkbox"> <input type="file" id="new_lot_form_car_photo1" accept="image/jpeg,image/png,image/gif"></p>
+                                    <p><input type="checkbox"> <input type="checkbox"> <input type="file" id="new_lot_form_car_photo1" accept="image/jpeg,image/png,image/gif" required></p>
                                     <p><input type="checkbox"> <input type="checkbox"> <input type="file" id="new_lot_form_car_photo2" accept="image/jpeg,image/png,image/gif"></p>
                                     <p><input type="checkbox"> <input type="checkbox"> <input type="file" id="new_lot_form_car_photo3" accept="image/jpeg,image/png,image/gif"></p>
                                     <p><input type="checkbox"> <input type="checkbox"> <input type="file" id="new_lot_form_car_photo4" accept="image/jpeg,image/png,image/gif"></p>
@@ -1469,7 +1187,11 @@
                         </div>
                     </form>
                     <div class="new_lot_demo">
-                        <h3>BMW M5 <span>2017</span></h3>
+                        <h3>
+                            <span id="new_lot_make">---</span>
+                            <span id="new_lot_model">---</span>
+                            <span id="new_lot_year">---</span>
+                        </h3>
                         <div class="new_lot_demo_inner_wrapper">
                             <div class="new_lot_demo_img">
                                 <img src="images/car_icon.jpg" alt="">
@@ -1479,57 +1201,57 @@
                                     <div class="new_lot_demo_detailed_info_column_1">
                                         <div>
                                             <p class="mileage"></p>
-                                            <p>100500km.</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="car_type"></p>
-                                            <p>Sedan</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="cylinders"></p>
-                                            <p>8</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="vin"></p>
-                                            <p>123456789</p>
+                                            <p>---</p>
                                         </div>
                                     </div>
 
                                     <div class="new_lot_demo_detailed_info_column_2">
                                         <div>
                                             <p class="damage"></p>
-                                            <p>Normal wear</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="fuel"></p>
-                                            <p>Petrol</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="drive"></p>
-                                            <p>4WD/RWD</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="color"></p>
-                                            <p>Blue</p>
+                                            <p>---</p>
                                         </div>
                                     </div>
 
                                     <div class="new_lot_demo_detailed_info_column_3">
                                         <div>
                                             <p class="location"></p>
-                                            <p>Vinnytsia</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="gearbox"></p>
-                                            <p>Automatic</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="engine"></p>
-                                            <p>4.4L</p>
+                                            <p>---</p>
                                         </div>
                                         <div>
                                             <p class="engine_power"></p>
-                                            <p>600 HP</p>
+                                            <p>---</p>
                                         </div>
 
                                     </div>
@@ -1539,10 +1261,158 @@
                         </div>
 
                         <div class="new_lot_bid_and_sale_date_info">
-                            <p>Minimal bid <span>3000$</span></p>
-                            <p>Sale date <span>31.01.2019 12:00</span></p>
-                            <p>Time left <span>5d. 12h. 35min.</span></p>
-                            <p>Fixed price <span>100.000$</span></p>
+                            <p>Minimal bid <span id="minimal_bid_span">---</span></p>
+                            <p>Sale date <span id="sale_date_span">---</span></p>
+                            <p>Fixed price <span id="fixed_price_span">---</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--End of "Lot List and Add lot" page structure        -->
+
+<!--"Lot List and Add lot" page structure         -->
+        <div class="search_page_wrapper">
+            <h3 class="search_page_header">search results</h3>
+            <div class="search_page_results_info">
+                <div class="search_page_results_for">
+                    <p>Results for: <span>azazazazghuy guyguyguyguy guyguyguyguy guyguyguyguyg uyguyguyguy a</span></p>
+                </div>
+                <div class="search_page_results_count">
+                    <p>
+                        <span class="number_of_lots_found">100500</span> lots found
+                    </p>
+                </div>
+            </div>
+            <div class="search_page_results">
+                <div class="cars_list">
+                    <div class="car_item">
+                            <div class="car_item_img">
+                                <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
+                            </div>
+                            <div class="car_item_info">
+                                <h3>
+                                    <a href="#">Mitsubishi outlander xl</a>
+                                    <span class="car_item_timer">Time left: 5d : 12h : 35min</span>
+                                    <span class="car_item_year">2017</span>
+                                </h3>
+                                <div class="car_item_data_and_bid_info">
+                                    <div class="car_item_data">
+                                        <div class="car_item_detailed_info">
+                                            <div class="car_item_engine_petrol_power">
+                                                <div class="car_item_engine">4.4L</div>
+                                                <div class="car_item_petrol">Petrol</div>
+                                                <div class="car_item_power">600 HP</div>
+                                            </div>
+                                            <div class="car_item_mileage_gearbox_drive">
+                                                <div class="car_item_mileage">125000 km.</div>
+                                                <div class="car_item_gearbox">Automatic</div>
+                                                <div class="car_item_drive">4WD/RWD</div>
+                                            </div>
+                                            <div class="car_item_location_body_style_damage">
+                                                <div class="car_item_location">Kyiv</div>
+                                                <div class="car_item_body_style">Sedan</div>
+                                                <div class="car_item_damage">Accident free</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="car_item_bid_info">
+                                        <div class="car_item_buy_for_a_fixed_price">
+                                            <p>Fixed Price <span>$100.000</span></p>
+                                            <p><a class="car_item_fixed_price_buy_now_btn" href="#">Buy Now</a></p>
+                                        </div>
+                                        <div class="car_item_bid_block">
+                                            <p>Current Bid <span>$1.000</span></p>
+                                            <p><a class="car_item_bid_now_btn" href="#">Bid Now</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="car_item">
+                        <div class="car_item_img">
+                            <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
+                        </div>
+                        <div class="car_item_info">
+                            <h3>
+                                <a href="#">Mitsubishi outlander xl</a>
+                                <span class="car_item_timer">Time left: 5d : 12h : 35min</span>
+                                <span class="car_item_year">2017</span>
+                            </h3>
+                            <div class="car_item_data_and_bid_info">
+                                <div class="car_item_data">
+                                    <div class="car_item_detailed_info">
+                                        <div class="car_item_engine_petrol_power">
+                                            <div class="car_item_engine">4.4L</div>
+                                            <div class="car_item_petrol">Petrol</div>
+                                            <div class="car_item_power">600 HP</div>
+                                        </div>
+                                        <div class="car_item_mileage_gearbox_drive">
+                                            <div class="car_item_mileage">125000 km.</div>
+                                            <div class="car_item_gearbox">Automatic</div>
+                                            <div class="car_item_drive">4WD/RWD</div>
+                                        </div>
+                                        <div class="car_item_location_body_style_damage">
+                                            <div class="car_item_location">Kyiv</div>
+                                            <div class="car_item_body_style">Sedan</div>
+                                            <div class="car_item_damage">Accident free</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car_item_bid_info">
+                                    <div class="car_item_buy_for_a_fixed_price">
+                                        <p>Fixed Price <span>$100.000</span></p>
+                                        <p><a class="car_item_fixed_price_buy_now_btn" href="#">Buy Now</a></p>
+                                    </div>
+                                    <div class="car_item_bid_block">
+                                        <p>Current Bid <span>$1.000</span></p>
+                                        <p><a class="car_item_bid_now_btn" href="#">Bid Now</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="car_item">
+                        <div class="car_item_img">
+                            <a href="#"><img src="images/bmw-m5.jpg" alt=""></a>
+                        </div>
+                        <div class="car_item_info">
+                            <h3>
+                                <a href="#">Mitsubishi outlander xl</a>
+                                <span class="car_item_timer">Time left: 5d : 12h : 35min</span>
+                                <span class="car_item_year">2017</span>
+                            </h3>
+                            <div class="car_item_data_and_bid_info">
+                                <div class="car_item_data">
+                                    <div class="car_item_detailed_info">
+                                        <div class="car_item_engine_petrol_power">
+                                            <div class="car_item_engine">4.4L</div>
+                                            <div class="car_item_petrol">Petrol</div>
+                                            <div class="car_item_power">600 HP</div>
+                                        </div>
+                                        <div class="car_item_mileage_gearbox_drive">
+                                            <div class="car_item_mileage">125000 km.</div>
+                                            <div class="car_item_gearbox">Automatic</div>
+                                            <div class="car_item_drive">4WD/RWD</div>
+                                        </div>
+                                        <div class="car_item_location_body_style_damage">
+                                            <div class="car_item_location">Kyiv</div>
+                                            <div class="car_item_body_style">Sedan</div>
+                                            <div class="car_item_damage">Accident free</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="car_item_bid_info">
+                                    <div class="car_item_buy_for_a_fixed_price">
+                                        <p>Fixed Price <span>$100.000</span></p>
+                                        <p><a class="car_item_fixed_price_buy_now_btn" href="#">Buy Now</a></p>
+                                    </div>
+                                    <div class="car_item_bid_block">
+                                        <p>Current Bid <span>$1.000</span></p>
+                                        <p><a class="car_item_bid_now_btn" href="#">Bid Now</a></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

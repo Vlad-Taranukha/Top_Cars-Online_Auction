@@ -455,7 +455,7 @@ header {
           @media all and (max-width: 525px) {
             header .header_logo_menu_search_block .menu_and_search_block .vehicles_on_sale p {
               font-size: 16px; } }
-          header .header_logo_menu_search_block .menu_and_search_block .vehicles_on_sale p span {
+          header .header_logo_menu_search_block .menu_and_search_block .vehicles_on_sale p span span {
             font-size: 26px;
             font-weight: bold;
             display: inline-block;
@@ -465,13 +465,13 @@ header {
             border-radius: 5px;
             margin-right: 3px; }
             @media all and (max-width: 1025px) {
-              header .header_logo_menu_search_block .menu_and_search_block .vehicles_on_sale p span {
+              header .header_logo_menu_search_block .menu_and_search_block .vehicles_on_sale p span span {
                 font-size: 22px; } }
             @media all and (max-width: 945px) {
-              header .header_logo_menu_search_block .menu_and_search_block .vehicles_on_sale p span {
+              header .header_logo_menu_search_block .menu_and_search_block .vehicles_on_sale p span span {
                 font-size: 20px; } }
             @media all and (max-width: 525px) {
-              header .header_logo_menu_search_block .menu_and_search_block .vehicles_on_sale p span {
+              header .header_logo_menu_search_block .menu_and_search_block .vehicles_on_sale p span span {
                 font-size: 18px; } }
       header .header_logo_menu_search_block .menu_and_search_block .main_menu {
         z-index: 999; }
@@ -1164,12 +1164,38 @@ main {
           padding: 10px 0 10px 50px; }
           .all_cars_wrapper .all_cars .filter_options section div p {
             margin-right: 20px; }
+            @media all and (max-width: 1180px) {
+              .all_cars_wrapper .all_cars .filter_options section div p {
+                margin-right: 50px; } }
+            .all_cars_wrapper .all_cars .filter_options section div p select, .all_cars_wrapper .all_cars .filter_options section div p input[type="text"] {
+              width: 100%;
+              border: 2px solid #264D9A;
+              border-radius: 10px;
+              padding: 5px;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box; }
       .all_cars_wrapper .all_cars .filter_options .filter_options_bottom_block {
         padding: 10px;
-        border-bottom-right-radius: 13px; }
-        @media all and (max-width: 1180px) {
-          .all_cars_wrapper .all_cars .filter_options .filter_options_bottom_block {
-            display: none; } }
+        border-bottom-right-radius: 13px;
+        /*@media all and(max-width:1180px){
+          display: none;
+        }*/ }
+        .all_cars_wrapper .all_cars .filter_options .filter_options_bottom_block p {
+          text-align: center; }
+          .all_cars_wrapper .all_cars .filter_options .filter_options_bottom_block p input[type="submit"] {
+            border: 2px solid #fff;
+            border-radius: 10px;
+            padding: 5px 20px;
+            background: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold; }
+            .all_cars_wrapper .all_cars .filter_options .filter_options_bottom_block p input[type="submit"]:hover {
+              cursor: pointer;
+              -webkit-box-shadow: 0 0 4px 1px #fff;
+              -moz-box-shadow: 0 0 4px 1px #fff;
+              box-shadow: 0 0 4px 1px #fff; }
     .all_cars_wrapper .all_cars .cars {
       flex-grow: 1;
       width: auto;
@@ -1247,6 +1273,14 @@ main {
         @media all and (max-width: 360px) {
           .all_cars_wrapper .all_cars .cars .cars_list {
             padding: 10px 25px; } }
+        .all_cars_wrapper .all_cars .cars .cars_list .showMore {
+          margin: 0 auto;
+          padding: 10px 20px;
+          color: #fff;
+          text-align: center;
+          border-radius: 20px; }
+          .all_cars_wrapper .all_cars .cars .cars_list .showMore:hover {
+            cursor: pointer; }
         .all_cars_wrapper .all_cars .cars .cars_list .car_item {
           display: flex;
           -webkit-box-sizing: border-box;
@@ -1289,7 +1323,7 @@ main {
               border-top-right-radius: 7px;
               border-top-left-radius: 0;
               position: relative; }
-              @media all and (max-width: 1190px) {
+              @media all and (max-width: 1250px) {
                 .all_cars_wrapper .all_cars .cars .cars_list .car_item .car_item_info h3 {
                   text-align: left;
                   padding-left: 50px; } }
@@ -1353,6 +1387,7 @@ main {
                     .all_cars_wrapper .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info {
                       flex-direction: column; } }
                   .all_cars_wrapper .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info div div {
+                    text-transform: capitalize;
                     margin-bottom: 20px;
                     padding-left: 30px;
                     line-height: 24px; }
@@ -2007,6 +2042,8 @@ main {
           .add_lot_wrapper .add_lot_lotList .add_lot_lotList_items .add_lot_lotList_item .add_lot_lotList_item_bid_and_sale_date_info > div {
             display: flex;
             margin-bottom: 10px; }
+            .add_lot_wrapper .add_lot_lotList .add_lot_lotList_items .add_lot_lotList_item .add_lot_lotList_item_bid_and_sale_date_info > div.timer_wrapper {
+              display: none; }
             .add_lot_wrapper .add_lot_lotList .add_lot_lotList_items .add_lot_lotList_item .add_lot_lotList_item_bid_and_sale_date_info > div:last-of-type {
               margin-bottom: 0; }
             .add_lot_wrapper .add_lot_lotList .add_lot_lotList_items .add_lot_lotList_item .add_lot_lotList_item_bid_and_sale_date_info > div p:first-of-type {
@@ -2064,6 +2101,9 @@ main {
       .add_lot_wrapper .add_lot_new_lot .new_lot .new_lot_demo h3 {
         border-top-left-radius: 20px;
         border-top-right-radius: 0; }
+        .add_lot_wrapper .add_lot_new_lot .new_lot .new_lot_demo h3 #new_lot_make, .add_lot_wrapper .add_lot_new_lot .new_lot .new_lot_demo h3 #new_lot_model {
+          font-size: 20px;
+          font-weight: bold; }
         @media all and (max-width: 1200px) {
           .add_lot_wrapper .add_lot_new_lot .new_lot .new_lot_demo h3 {
             border-bottom-right-radius: 20px;
@@ -2230,7 +2270,8 @@ main {
       .add_lot_wrapper .add_lot_new_lot .new_lot #new_lot_form input, .add_lot_wrapper .add_lot_new_lot .new_lot #new_lot_form select {
         border: 2px solid #264D9A;
         padding: 5px;
-        border-radius: 10px; }
+        border-radius: 10px;
+        text-transform: capitalize; }
         .add_lot_wrapper .add_lot_new_lot .new_lot #new_lot_form input:focus, .add_lot_wrapper .add_lot_new_lot .new_lot #new_lot_form select:focus {
           -webkit-box-shadow: 0 0 2px 0.5px #264D9A;
           -moz-box-shadow: 0 0 2px 0.5px #264D9A;
@@ -2251,6 +2292,250 @@ main {
             background: #fff;
             color: #264D9A;
             transition: border 0.2s, background-color 0.2s, color 0.2s; }
+
+.search_page_wrapper {
+  padding-top: 0; }
+  .search_page_wrapper .search_page_header {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    color: #fff;
+    text-align: center;
+    -webkit-box-shadow: 0 0 4px 1px #fff;
+    -moz-box-shadow: 0 0 4px 1px #fff;
+    box-shadow: 0 0 4px 1px #fff; }
+    @media all and (max-width: 900px) {
+      .search_page_wrapper .search_page_header {
+        margin-top: 20px; } }
+  .search_page_wrapper .search_page_results_info {
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between; }
+    @media all and (max-width: 840px) {
+      .search_page_wrapper .search_page_results_info {
+        flex-direction: column;
+        align-items: center; } }
+  @media all and (max-width: 840px) and (max-width: 600px) {
+    .search_page_wrapper .search_page_results_info {
+      padding: 10px 25px; } }
+  @media all and (max-width: 840px) and (max-width: 400px) {
+    .search_page_wrapper .search_page_results_info {
+      padding: 10px; } }
+    @media all and (max-width: 840px) {
+        .search_page_wrapper .search_page_results_info div:first-of-type {
+          margin-bottom: 20px; } }
+  @media all and (max-width: 840px) and (max-width: 600px) {
+    .search_page_wrapper .search_page_results_info div p {
+      text-align: center; }
+      .search_page_wrapper .search_page_results_info div p span {
+        display: block;
+        margin-right: 0;
+        margin-left: 0; } }
+    .search_page_wrapper .search_page_results_info div p {
+      font-weight: bold; }
+      .search_page_wrapper .search_page_results_info div p span {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 5px;
+        margin-left: 5px;
+        border-radius: 10px; }
+        .search_page_wrapper .search_page_results_info div p span.number_of_lots_found {
+          margin-right: 5px; }
+  .search_page_wrapper .search_page_results {
+    padding: 10px 50px; }
+    @media all and (max-width: 600px) {
+      .search_page_wrapper .search_page_results {
+        padding: 10px 25px; } }
+    @media all and (max-width: 400px) {
+      .search_page_wrapper .search_page_results {
+        padding: 10px; } }
+    .search_page_wrapper .search_page_results .cars_list .car_item {
+      display: flex;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-bottom: 10px; }
+      @media all and (max-width: 1180px) {
+        .search_page_wrapper .search_page_results .cars_list .car_item {
+          padding-bottom: 10px;
+          border-bottom: 1px solid #fff; } }
+      @media all and (max-width: 830px) {
+        .search_page_wrapper .search_page_results .cars_list .car_item {
+          flex-direction: column; } }
+      .search_page_wrapper .search_page_results .cars_list .car_item:last-of-type {
+        margin-bottom: 0; }
+        @media all and (max-width: 1180px) {
+          .search_page_wrapper .search_page_results .cars_list .car_item:last-of-type {
+            border-bottom: none; } }
+      @media all and (max-width: 830px) {
+        .search_page_wrapper .search_page_results .cars_list .car_item .car_item_img {
+          align-self: center;
+          margin-bottom: 10px; } }
+      .search_page_wrapper .search_page_results .cars_list .car_item .car_item_img a {
+        display: block;
+        padding: 0;
+        max-height: 180px; }
+      .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info {
+        flex-grow: 1;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+        @media all and (max-width: 900px) {
+          .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info {
+            border-top-right-radius: 0; } }
+        .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 {
+          text-align: center;
+          padding: 5px 0;
+          border-top-right-radius: 7px;
+          border-top-left-radius: 0;
+          position: relative; }
+          @media all and (max-width: 1250px) {
+            .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 {
+              text-align: left;
+              padding-left: 50px; } }
+          @media all and (max-width: 900px) {
+            .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 {
+              border-top-right-radius: 0; } }
+          @media all and (max-width: 600px) {
+            .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 {
+              position: static;
+              padding-left: 0;
+              text-align: center; } }
+          @media all and (max-width: 360px) {
+            .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 {
+              border-radius: 15px; } }
+          .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase; }
+            @media all and (max-width: 360px) {
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 a {
+                font-size: 18px; } }
+          .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 .car_item_timer {
+            position: absolute;
+            right: 1%; }
+            @media all and (max-width: 600px) {
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 .car_item_timer {
+                position: static; } }
+          .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 .car_item_year {
+            position: absolute;
+            left: 1%; }
+            @media all and (max-width: 600px) {
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info h3 .car_item_year {
+                position: static; } }
+        .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info {
+          display: flex;
+          justify-content: space-between; }
+          @media all and (max-width: 900px) {
+            .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info {
+              flex-wrap: wrap; } }
+          .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data {
+            flex-grow: 1;
+            align-self: center; }
+            @media all and (max-width: 900px) {
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data {
+                order: 2;
+                width: 100%;
+                background: rgba(29, 29, 31, 0.75);
+                padding: 10px;
+                border-radius: 15px;
+                -webkit-box-shadow: 0 0 4px 1px #fff, inset 0 0 4px 1px #fff;
+                -moz-box-shadow: 0 0 4px 1px #fff, inset 0 0 4px 1px #fff;
+                box-shadow: 0 0 4px 1px #fff, inset 0 0 4px 1px #fff; } }
+            @media all and (max-width: 480px) {
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data {
+                flex-direction: column; } }
+            .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info {
+              display: flex;
+              justify-content: space-around; }
+              @media all and (max-width: 480px) {
+                .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info {
+                  flex-direction: column; } }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info div div {
+                text-transform: capitalize;
+                margin-bottom: 20px;
+                padding-left: 30px;
+                line-height: 24px; }
+                @media all and (max-width: 480px) {
+                  .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info div div {
+                    margin-bottom: 0;
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    border-bottom: 1px solid #fff; } }
+                .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info div div:last-of-type {
+                  margin-bottom: 0; }
+                  @media all and (max-width: 480px) {
+                    .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info div div:last-of-type {
+                      margin-bottom: 0; } }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_engine {
+                background: url(../images/engine.png) left center no-repeat; }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_petrol {
+                background: url(../images/fuel.png) left center no-repeat; }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_power {
+                background: url(../images/engine_power.png) left center no-repeat; }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_mileage {
+                background: url(../images/mileage.png) left center no-repeat; }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_gearbox {
+                background: url(../images/gearbox.png) left center no-repeat; }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_drive {
+                background: url(../images/drive.png) left center no-repeat; }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_location {
+                background: url(../images/location.png) left center no-repeat; }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_body_style {
+                background: url(../images/engine_power.png) left center no-repeat; }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_damage {
+                background: url(../images/damage.png) left center no-repeat; }
+                @media all and (max-width: 480px) {
+                  .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_damage {
+                    border-bottom: none; } }
+          .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info {
+            padding: 0 30px;
+            border-bottom-right-radius: 5px; }
+            @media all and (max-width: 900px) {
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info {
+                order: 1;
+                padding: 10px 50px;
+                margin: 11px auto;
+                border-radius: 10px; }
+                .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info > div {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between; }
+                  .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info > div p:first-of-type {
+                    margin-right: 50px; } }
+            @media all and (max-width: 470px) {
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info {
+                padding: 10px 20px; }
+                .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info > div > p:first-of-type {
+                  margin-right: 20px; } }
+            @media all and (max-width: 380px) {
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info {
+                padding: 10px; }
+                .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info > div > p:first-of-type {
+                  margin-right: 10px; } }
+            @media all and (max-width: 360px) {
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info {
+                width: 100%; } }
+            .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p {
+              text-align: center;
+              font-size: 14px; }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p span {
+                font-weight: bold;
+                font-size: 16px; }
+              .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p a {
+                display: inline-block;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-decoration: none;
+                margin: 10px 0; }
+                .search_page_wrapper .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p a:hover {
+                  text-decoration: underline; }
 
 .footer_block {
   padding-top: 20px; }
@@ -2895,6 +3180,13 @@ main {
 
 .all_cars_wrapper_day .all_cars .cars .cars_list {
   border-left: 2px solid #264D9A; }
+  .all_cars_wrapper_day .all_cars .cars .cars_list .showMore {
+    border: 2px solid #264D9A;
+    background: #264D9A; }
+    .all_cars_wrapper_day .all_cars .cars .cars_list .showMore:hover {
+      -webkit-box-shadow: 0 0 4px 1px #264D9A;
+      -moz-box-shadow: 0 0 4px 1px #264D9A;
+      box-shadow: 0 0 4px 1px #264D9A; }
   .all_cars_wrapper_day .all_cars .cars .cars_list .car_item .car_item_info {
     border: 2px solid #264D9A;
     border-left: none; }
@@ -2952,6 +3244,9 @@ main {
     .all_cars_wrapper_day .all_cars .cars .cars_bottom_pagination ul li a:hover {
       background: #264D9A;
       color: #fff; }
+    .all_cars_wrapper_day .all_cars .cars .cars_bottom_pagination ul li a.active {
+      background: #264D9A;
+      color: #fff; }
 
 .all_cars_wrapper_day .to_top p {
   background: #264D9A; }
@@ -2975,6 +3270,11 @@ main {
     background: url(../images/show_child.png) 95% center no-repeat, #1d1d1f; }
   .all_cars_wrapper_night .all_cars .filter_options section div {
     color: #fff; }
+    .all_cars_wrapper_night .all_cars .filter_options section div p select, .all_cars_wrapper_night .all_cars .filter_options section div p input[type="text"] {
+      border: 2px solid #1d1d1f;
+      -webkit-box-shadow: 0 0 2px 1px #fff;
+      -moz-box-shadow: 0 0 2px 1px #fff;
+      box-shadow: 0 0 2px 1px #fff; }
   .all_cars_wrapper_night .all_cars .filter_options .filter_options_bottom_block {
     background: #1d1d1f; }
 
@@ -3008,68 +3308,73 @@ main {
       .all_cars_wrapper_night .all_cars .cars .cars_display_settings .cars_pagination ul li a:hover {
         background: #fff;
         color: #1d1d1f; }
-  .all_cars_wrapper_night .all_cars .cars .cars_list {
-    border-left: 2px solid #fff; }
-    .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info {
-      border: 2px solid #fff;
-      border-left: none; }
-      @media all and (max-width: 900px) {
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info {
-          border-bottom: none;
-          border-right: none; } }
-      @media all and (max-width: 360px) {
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info {
-          border-top: none; } }
-      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info h3 {
-        border-top: none;
-        border-left: none;
-        background: white; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info h3 a {
-          color: #1d1d1f; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info h3 .car_item_timer {
-          color: #1d1d1f; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info h3 .car_item_year {
-          color: #1d1d1f; }
-      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info {
-        background: rgba(29, 29, 31, 0.75); }
-        @media all and (max-width: 900px) {
-          .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info {
-            background: none; } }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info div div {
-          color: #fff; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_engine {
-          background: url(../images/engine_night.png) left center no-repeat; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_petrol {
-          background: url(../images/fuel_night.png) left center no-repeat; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_power {
-          background: url(../images/engine_power_night.png) left center no-repeat; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_mileage {
-          background: url(../images/mileage_night.png) left center no-repeat; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_gearbox {
-          background: url(../images/gearbox_night.png) left center no-repeat; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_drive {
-          background: url(../images/drive_night.png) left center no-repeat; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_location {
-          background: url(../images/location_night.png) left center no-repeat; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_body_style {
-          background: url(../images/car_type_night.png) left center no-repeat; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_damage {
-          background: url(../images/damage_night.png) left center no-repeat; }
-        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info {
-          background: #fff; }
-          .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p {
-            color: #1d1d1f; }
-            .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p a {
-              background: #1d1d1f;
-              color: #fff; }
-  .all_cars_wrapper_night .all_cars .cars .cars_bottom_pagination {
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff; }
-    .all_cars_wrapper_night .all_cars .cars .cars_bottom_pagination ul li a {
-      color: #fff; }
-      .all_cars_wrapper_night .all_cars .cars .cars_bottom_pagination ul li a:hover {
-        background: #fff;
+  .all_cars_wrapper_night .all_cars .cars .cars_list .showMore {
+    border: 2px solid #fff;
+    background: rgba(29, 29, 31, 0.75); }
+    .all_cars_wrapper_night .all_cars .cars .cars_list .showMore:hover {
+      -webkit-box-shadow: 0 0 4px 1px #fff;
+      -moz-box-shadow: 0 0 4px 1px #fff;
+      box-shadow: 0 0 4px 1px #fff; }
+  .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info {
+    border: 2px solid #fff;
+    border-left: none; }
+    @media all and (max-width: 900px) {
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info {
+        border-bottom: none;
+        border-right: none; } }
+    @media all and (max-width: 360px) {
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info {
+        border-top: none; } }
+    .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info h3 {
+      border-top: none;
+      border-left: none;
+      background: white; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info h3 a {
         color: #1d1d1f; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info h3 .car_item_timer {
+        color: #1d1d1f; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info h3 .car_item_year {
+        color: #1d1d1f; }
+    .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info {
+      background: rgba(29, 29, 31, 0.75); }
+      @media all and (max-width: 900px) {
+        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info {
+          background: none; } }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info div div {
+        color: #fff; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_engine {
+        background: url(../images/engine_night.png) left center no-repeat; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_petrol {
+        background: url(../images/fuel_night.png) left center no-repeat; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_power {
+        background: url(../images/engine_power_night.png) left center no-repeat; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_mileage {
+        background: url(../images/mileage_night.png) left center no-repeat; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_gearbox {
+        background: url(../images/gearbox_night.png) left center no-repeat; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_drive {
+        background: url(../images/drive_night.png) left center no-repeat; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_location {
+        background: url(../images/location_night.png) left center no-repeat; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_body_style {
+        background: url(../images/car_type_night.png) left center no-repeat; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_damage {
+        background: url(../images/damage_night.png) left center no-repeat; }
+      .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info {
+        background: #fff; }
+        .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p {
+          color: #1d1d1f; }
+          .all_cars_wrapper_night .all_cars .cars .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p a {
+            background: #1d1d1f;
+            color: #fff; }
+  .all_cars_wrapper_night .all_cars .cars .cars_bottom_pagination ul li a {
+    color: #fff; }
+    .all_cars_wrapper_night .all_cars .cars .cars_bottom_pagination ul li a:hover {
+      background: #fff;
+      color: #1d1d1f; }
+    .all_cars_wrapper_night .all_cars .cars .cars_bottom_pagination ul li a.active {
+      background: #fff;
+      color: #1d1d1f; }
 
 .all_cars_wrapper_night .to_top {
   -webkit-box-shadow: 0 0 4px 1px #fff;
@@ -3622,6 +3927,128 @@ main {
         border: 2px solid #fff;
         background: #1d1d1f;
         color: #fff; }
+
+.search_page_wrapper_day h3 {
+  background: #264D9A; }
+
+.search_page_wrapper_day .search_page_results_info {
+  color: #264D9A;
+  border-bottom: 2px solid #264D9A; }
+  .search_page_wrapper_day .search_page_results_info div p span {
+    background: #264D9A;
+    color: #fff; }
+
+.search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info {
+  border: 2px solid #264D9A;
+  border-left: none; }
+  @media all and (max-width: 900px) {
+    .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info {
+      border: none; } }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info h3 a {
+    color: #fff; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info h3 .car_item_timer {
+    color: #fff; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info h3 .car_item_year {
+    color: #fff; }
+  @media all and (max-width: 900px) {
+    .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data {
+      background: none;
+      -webkit-box-shadow: 0 0 4px 1px #264D9A, inset  0 0 4px 1px #264D9A;
+      -moz-box-shadow: 0 0 4px 1px #264D9A, inset 0 0 4px 1px #264D9A;
+      box-shadow: 0 0 4px 1px #264D9A, inset  0 0 4px 1px #264D9A; } }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info div div {
+    color: #264D9A; }
+    @media all and (max-width: 480px) {
+      .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info div div {
+        border-bottom: 1px solid #264D9A; } }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_engine {
+    background: url(../images/engine.png) left center no-repeat; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_petrol {
+    background: url(../images/fuel.png) left center no-repeat; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_power {
+    background: url(../images/engine_power.png) left center no-repeat; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_mileage {
+    background: url(../images/mileage.png) left center no-repeat; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_gearbox {
+    background: url(../images/gearbox.png) left center no-repeat; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_drive {
+    background: url(../images/drive.png) left center no-repeat; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_location {
+    background: url(../images/location.png) left center no-repeat; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_body_style {
+    background: url(../images/car_type.png) left center no-repeat; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_damage {
+    background: url(../images/damage.png) left center no-repeat; }
+  .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info {
+    background: #264D9A; }
+    .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p {
+      color: #fff; }
+      .search_page_wrapper_day .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p a {
+        background: #fff;
+        color: #264D9A; }
+
+.search_page_wrapper_night h3 {
+  background: rgba(29, 29, 31, 0.75); }
+
+.search_page_wrapper_night .search_page_results_info {
+  color: #fff;
+  border-bottom: 2px solid #fff; }
+  .search_page_wrapper_night .search_page_results_info div p span {
+    background: #fff;
+    color: #1d1d1f; }
+
+.search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info {
+  border: 2px solid #fff;
+  border-left: none; }
+  @media all and (max-width: 900px) {
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info {
+      border-bottom: none;
+      border-right: none; } }
+  @media all and (max-width: 360px) {
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info {
+      border-top: none; } }
+  .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info h3 {
+    border-top: none;
+    border-left: none;
+    background: white; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info h3 a {
+      color: #1d1d1f; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info h3 .car_item_timer {
+      color: #1d1d1f; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info h3 .car_item_year {
+      color: #1d1d1f; }
+  .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info {
+    background: rgba(29, 29, 31, 0.75); }
+    @media all and (max-width: 900px) {
+      .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info {
+        background: none; } }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info div div {
+      color: #fff; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_engine {
+      background: url(../images/engine_night.png) left center no-repeat; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_petrol {
+      background: url(../images/fuel_night.png) left center no-repeat; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_power {
+      background: url(../images/engine_power_night.png) left center no-repeat; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_mileage {
+      background: url(../images/mileage_night.png) left center no-repeat; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_gearbox {
+      background: url(../images/gearbox_night.png) left center no-repeat; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_drive {
+      background: url(../images/drive_night.png) left center no-repeat; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_location {
+      background: url(../images/location_night.png) left center no-repeat; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_body_style {
+      background: url(../images/car_type_night.png) left center no-repeat; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_data .car_item_detailed_info .car_item_damage {
+      background: url(../images/damage_night.png) left center no-repeat; }
+    .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info {
+      background: #fff; }
+      .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p {
+        color: #1d1d1f; }
+        .search_page_wrapper_night .search_page_results .cars_list .car_item .car_item_info .car_item_data_and_bid_info .car_item_bid_info p a {
+          background: #1d1d1f;
+          color: #fff; }
 
 .footer_night {
   background: url(../images/bg_night.png);

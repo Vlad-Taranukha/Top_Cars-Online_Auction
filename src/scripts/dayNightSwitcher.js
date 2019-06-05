@@ -16,6 +16,8 @@ function dayNightSwitcher() {
         $('.single_car_wrapper').removeClass('single_car_wrapper_day').addClass('single_car_wrapper_night');
         $('.view_similar_vehicles_wrapper').removeClass('view_similar_vehicles_wrapper_day').addClass('view_similar_vehicles_wrapper_night');
         $('.add_lot_wrapper').removeClass('add_lot_wrapper_day').addClass('add_lot_wrapper_night');
+        $('.search_page_wrapper').removeClass('search_page_wrapper_day').addClass('search_page_wrapper_night');
+        $('.contacts_page_wrapper').removeClass('contacts_page_wrapper_day').addClass('contacts_page_wrapper_night');
         $('header').removeClass('header_day').addClass('header_night');
         let menuItemLiA = $('' +
             'header .header_logo_menu_search_block .menu_and_search_block .main_menu ul li a,' +
@@ -55,6 +57,8 @@ function dayNightSwitcher() {
         $('.single_car_wrapper').removeClass('single_car_wrapper_night').addClass('single_car_wrapper_day');
         $('.view_similar_vehicles_wrapper').removeClass('view_similar_vehicles_wrapper_night').addClass('view_similar_vehicles_wrapper_day');
         $('.add_lot_wrapper').removeClass('add_lot_wrapper_night').addClass('add_lot_wrapper_day');
+        $('.search_page_wrapper').removeClass('search_page_wrapper_night').addClass('search_page_wrapper_day');
+        $('.contacts_page_wrapper').removeClass('contacts_page_wrapper_night').addClass('contacts_page_wrapper_day');
         $('header').removeClass('header_night').addClass('header_day');
         let menuItemLiA = $('' +
             'header .header_logo_menu_search_block .menu_and_search_block .main_menu ul li a,' +

@@ -1,11 +1,20 @@
 import getFeaturedCars from "./getFeaturedCars";
 import clearContentBlock from "./clearContentBlock";
+import getCarByVin from "./search/searchByVinForm";
+import getCarsFromVehicleFinderForm from "./search/vehicleFinder";
 
 function initIndexPage() {
+
     clearContentBlock();
     $('.header_slider').css('display', 'flex');
     $('.featured_cars>div').remove();
     $.getJSON('json_data/data.json', {}, function (data) {
+
+        $('#cars_on_sale').html("");
+        for (let i = 0; i < String(data.length).length; i++){
+            $('#cars_on_sale').append("<span>"+String(data.length)[i]+"</span>");
+        }
+
         let makes = [];
         for (let i = 0; i < data.length; i++){
             makes.push(data[i].name.toLowerCase());
@@ -64,6 +73,10 @@ function initIndexPage() {
             });
         }
     });
+
+    getCarByVin();
+    getCarsFromVehicleFinderForm();
+
 }
 
 export default initIndexPage;

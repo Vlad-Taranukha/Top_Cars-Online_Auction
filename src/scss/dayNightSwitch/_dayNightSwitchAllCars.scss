@@ -19,7 +19,8 @@
 
       section{
         h4{
-          background: url("../images/show_child.png") 95% center no-repeat, #264D9A;
+          //background: url("../images/show_child.png") 95% center no-repeat, #264D9A;
+          background: #264D9A;
         }
 
         div{
@@ -68,6 +69,17 @@
 
       .cars_list{
         border-left: 2px solid #264D9A;
+
+        .showMore{
+          border: 2px solid #264D9A;
+          background: #264D9A;
+
+          &:hover{
+            -webkit-box-shadow: 0 0 4px 1px #264D9A;
+            -moz-box-shadow: 0 0 4px 1px #264D9A;
+            box-shadow: 0 0 4px 1px #264D9A;
+          }
+        }
 
         .car_item{
 
@@ -225,11 +237,25 @@
 
       section{
         h4{
-          background: url("../images/show_child.png") 95% center no-repeat, #1d1d1f;
+          //background: url("../images/show_child.png") 95% center no-repeat, #1d1d1f;
+          background: #1d1d1f;
+          -webkit-box-shadow: 0 2px 4px 1px #fff;
+          -moz-box-shadow: 0 2px 4px 1px #fff;
+          box-shadow: 0 2px 4px 1px #fff;
         }
 
         div{
           color: #fff;
+
+
+          p{
+            select, input[type="text"]{
+              border: 2px solid #1d1d1f;
+              -webkit-box-shadow: 0 0 2px 1px #fff;
+              -moz-box-shadow: 0 0 2px 1px #fff;
+              box-shadow: 0 0 2px 1px #fff;
+            }
+          }
 
         }
       }
@@ -288,7 +314,19 @@
       }
 
       .cars_list{
-        border-left: 2px solid #fff;
+        //border-left: 2px solid #fff;
+
+
+        .showMore{
+          border: 2px solid #fff;
+          background: rgba(29, 29, 31, 0.75);
+
+          &:hover{
+            -webkit-box-shadow: 0 0 4px 1px #fff;
+            -moz-box-shadow: 0 0 4px 1px #fff;
+            box-shadow: 0 0 4px 1px #fff;
+          }
+        }
 
         .car_item{
 
@@ -387,8 +425,8 @@
       }
 
       .cars_bottom_pagination{
-        border-left: 2px solid #fff;
-        border-bottom: 2px solid #fff;
+        //border-left: 2px solid #fff;
+        //border-bottom: 2px solid #fff;
 
         ul li a{
           color: #fff;
