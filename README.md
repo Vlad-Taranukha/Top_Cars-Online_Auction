@@ -1,4 +1,4 @@
-# MyProject
+# Top CARS
 Project topic is online auction. 
 It is designed as specialized car online auction.
 To run it, do 'npm run start' command in the terminal of the IDE.
