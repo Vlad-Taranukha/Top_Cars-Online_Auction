@@ -19,3 +19,5 @@ Near the lots there is a section for filtration by different criteria.
 Filtered lots are shows 10 per section. If the number of lots is more than 10, the button of showing more appears.
 'Single lot' page contains a gallery with lot photos, sections with different lot details, sale date, price info and a section that gives an opportunity to place a bid.
 Under the section of a single lot, there is a block with similar lots, which displays as a slider on mobile devices.  
+
+You can see it on http://vlt.zzz.com.ua/
